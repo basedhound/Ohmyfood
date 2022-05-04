@@ -1,0 +1,5 @@
+# ignore all logs
+*.log
+
+# ignore files inside tmp folder
+tmp/*
