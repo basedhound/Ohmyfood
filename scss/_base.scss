@@ -1,0 +1,40 @@
+//!  IMPORT
+// Font - Shirkand
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+// Font - Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+
+
+//!  STARTER PACK
+// Détecter erreurs de conteneurs / Detect container errors
+// *,
+// ::before,
+// ::after {
+//     border: 1px solid;
+// }
+
+// Bordure à l'intérieur des éléments / Borders inside container
+*,
+::before,
+::after {
+    box-sizing:border-box
+}
+
+// Img ne sortent pas de leur conteneur / Prevent img from overflowing container
+img { 
+    max-width: 100%;
+    height: auto;
+}
+
+
+//! BASE FONT SIZE
+// Font size 62.5% trick for rem
+html {
+    font-size: 62.5%;   
+ }
+    
+ body {   
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+ }
