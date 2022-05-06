@@ -1,0 +1,23 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Openclassrooms / Dev-Web / P3 : Dynamisez une page web avec des animations CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch scss/main.scss:public/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jozefstallone/ohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jozefstallone/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/jozefstallone/ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
+}

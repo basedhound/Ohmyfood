@@ -45,16 +45,13 @@ header {
   background-color: #FAFAFA;
   padding: 2rem;
 }
-
 .explorer h2 {
   font-size: 2.5rem;
 }
-
 .explorer p {
   font-size: 1.8rem;
   color: grey;
 }
-
 .explorer button {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -62,17 +59,18 @@ header {
   padding-right: 3rem;
   background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border: none;
   border-radius: 3rem;
-  color: white;
+  border: none;
   font-size: 1.7rem;
   font-weight: 500;
+  color: white;
   margin-top: 1rem;
   margin-bottom: 4rem;
   cursor: pointer;
 }
-
 .explorer button:hover {
   opacity: 0.8;
   transition: opacity 1000ms;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

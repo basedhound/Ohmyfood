@@ -56,6 +56,7 @@ header {
     cursor: pointer;
 }
 
+
 //!  MAIN 
 //!  SECTION 1 : LOCATION
 
@@ -69,42 +70,46 @@ header {
     gap: 1.5rem; 
 }
 
+
 //!  SECTION 2 : EXPLORE, BUTTON
 
-.explorer { 
+.explorer {
     text-align: center;
-    background-color: #FAFAFA; 
+    background-color: #FAFAFA;
     padding: 2rem;
+
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        color: grey;
+    }
+
+    button {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 3rem;
+        border: none;
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: white;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        cursor: pointer;
+    }
+
+    button:hover {
+        opacity: 0.8;
+        transition: opacity 1000ms;
+    }
+
 }
 
-.explorer h2 {
-    font-size: 2.5rem;
-}
-
-.explorer p {
-    font-size: 1.8rem;
-    color: grey;
-}
-
-.explorer button {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem; 
-    background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
-    border: none;
-    border-radius: 3rem;
-    color: white;
-    font-size: 1.7rem;
-    font-weight: 500;
-    margin-top: 1rem; 
-    margin-bottom: 4rem; 
-    cursor: pointer;
-}
-
-.explorer button:hover { 
-    opacity: 0.8;
-    transition: opacity 1000ms;
-}
 
