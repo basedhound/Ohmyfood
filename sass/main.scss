@@ -6,7 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
 
 
-
 //!  STARTER PACK
 // Détecter erreurs de conteneurs / Detect container errors
 // *,
@@ -29,7 +28,7 @@ img {
 }
 
 
-//!  FONT SIZE
+//! BASE FONT SIZE
 // Font size 62.5% trick for rem
 html {
     font-size: 62.5%;   
@@ -41,6 +40,11 @@ html {
  }
 
 
+//!  VARIABLES & MIXINS
+
+
+
+
 //!  HEADER : LOGO
 header {
     font-family: "Shrikhand", "cursive"; 
@@ -49,6 +53,7 @@ header {
     box-shadow: 0px 5px 5px lightgrey;
     padding: 0.2rem;
     position: relative;
+    cursor: pointer;
 }
 
 //!  MAIN 
@@ -69,14 +74,37 @@ header {
 .explorer { 
     text-align: center;
     background-color: #FAFAFA; 
+    padding: 2rem;
 }
 
 .explorer h2 {
     font-size: 2.5rem;
-    margin-top: 3rem;
 }
 
 .explorer p {
+    font-size: 1.8rem;
+    color: grey;
+}
+
+.explorer button {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem; 
+    background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+    border: none;
+    border-radius: 3rem;
+    color: white;
     font-size: 1.7rem;
+    font-weight: 500;
+    margin-top: 1rem; 
+    margin-bottom: 4rem; 
+    cursor: pointer;
+}
+
+.explorer button:hover { 
+    opacity: 0.8;
+    transition: opacity 1000ms;
 }
 
