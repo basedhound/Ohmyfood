@@ -5,6 +5,7 @@
 
 //* UTILS
 @import "./utils/mixins";
+@import "./utils/variables";
 
 //* LAYOUT
 @import "./layout/00\ header.scss";
@@ -17,13 +18,15 @@
 //! 03 : TUTORIAL
 
 .tutorial {
+    counter-reset: tuto;
     padding: 0 1rem;
-
+    margin-right: 5rem; //Elements trop collés à droite, need fix
 
     & ol {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        list-style: none;
+        gap: 4rem;
 
 
         @media (min-width: 767px) {
@@ -31,21 +34,43 @@
         }
     }
 
+    & li {
+        position: relative;
+        display: flex;
+        align-items: center;
 
-    & li { 
-        background-color: #F3F3F3;
+        &::before {
+            content: counter(tuto); //Toujours mettre un content après un before
+            counter-increment: tuto;
+            background-color: $color-1;
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: grid;
+            place-items: center;
+            border-radius: 50%; //Cercle autour du chiffre
+            position: absolute; //Si position absolute sur un enfant, mettre le parent en position relative
+            left: -1.5rem;
+        }
+
+        background-color: $color-4;
         padding: 2rem 2rem;
         // border: 1px solid red;
         flex-grow: 1;
         border-radius: 1.5rem;
-        list-style: none;
-        font-weight: 600;        
+        font-weight: 600; 
+        font-size: 1.8rem ;       
         @include base-shadow;
         &:hover {
         @include zoom;
         }
+
         & i {
             margin-right: 1rem;
+            color: grey;
+            font-size: 2rem;
+            padding: 1rem;
+
         } 
     }
 

@@ -24,6 +24,10 @@ h2 {
   font-size: 2.5rem;
 }
 
+body {
+  min-width: 320px;
+}
+
 header {
   font-family: "Shrikhand", "cursive";
   font-size: 1.5rem;
@@ -76,12 +80,15 @@ header {
 }
 
 .tutorial {
+  counter-reset: tuto;
   padding: 0 1rem;
+  margin-right: 5rem;
 }
 .tutorial ol {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  list-style: none;
+  gap: 4rem;
 }
 @media (min-width: 767px) {
   .tutorial ol {
@@ -89,19 +96,38 @@ header {
   }
 }
 .tutorial li {
+  position: relative;
+  display: flex;
+  align-items: center;
   background-color: #F3F3F3;
   padding: 2rem 2rem;
   flex-grow: 1;
   border-radius: 1.5rem;
-  list-style: none;
   font-weight: 600;
+  font-size: 1.8rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.tutorial li::before {
+  content: counter(tuto);
+  counter-increment: tuto;
+  background-color: #9356DC;
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  left: -1.5rem;
 }
 .tutorial li:hover {
   transform: scale(1.02);
 }
 .tutorial li i {
   margin-right: 1rem;
+  color: grey;
+  font-size: 2rem;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
