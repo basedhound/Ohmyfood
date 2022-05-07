@@ -58,6 +58,7 @@ header {
   color: grey;
 }
 .explorer button {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   padding-left: 3rem;
@@ -71,12 +72,12 @@ header {
   margin-top: 1rem;
   margin-bottom: 4rem;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .explorer button:hover {
-  opacity: 0.8;
-  transition: opacity 1000ms;
-  transform: scale(1.02);
+  transform: scale(1.05);
+  transition: transform 2s;
+  opacity: 0.85;
+  transition: all 2s;
 }
 
 .tutorial {
@@ -105,6 +106,7 @@ header {
   border-radius: 1.5rem;
   font-weight: 600;
   font-size: 1.8rem;
+  cursor: default;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .tutorial li::before {
@@ -121,7 +123,8 @@ header {
   left: -1.5rem;
 }
 .tutorial li:hover {
-  transform: scale(1.02);
+  background-color: #f5edff;
+  transition: all 2s;
 }
 .tutorial li i {
   margin-right: 1rem;

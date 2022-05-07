@@ -11,6 +11,7 @@
     }
 
     button {
+        @include base-shadow;  
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
         padding-left: 3rem;
@@ -25,12 +26,13 @@
         margin-top: 1rem;
         margin-bottom: 4rem;
         cursor: pointer;
-        @include base-shadow;       
+ 
 
         &:hover {
-            opacity: 0.8;
-            transition: opacity 1000ms;
             @include zoom;
+            opacity: 0.85;
+            transition: all 2s;  
+
         }
     }
    
