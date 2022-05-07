@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 // Font - Roboto
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap');
 
 
 //!  STARTER PACK
@@ -28,7 +28,7 @@ img {
 }
 
 
-//! BASE FONT SIZE
+//! FONTS
 // Font size 62.5% trick for rem
 html {
     font-size: 62.5%;   
@@ -38,3 +38,9 @@ html {
     font-size: 1.4rem;
     font-family: "Roboto", sans-serif;
  }
+
+ h2 {
+    font-size: 2.5rem;
+}
+
+
