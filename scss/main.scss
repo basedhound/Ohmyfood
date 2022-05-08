@@ -13,3 +13,38 @@
 @import "./layout/02\ explorer.scss";
 @import "./layout/03\ tutorial.scss";
 
+.restaurants { 
+    background-color: $color-4;
+    margin-top: 5rem;
+    padding-top: 2.5rem;
+    
+    &__cards { 
+        list-style: none;
+        padding-left: 0;
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+
+ 
+        @media (min-width: 1000px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+
+
+
+
+    }
+
+    .card {
+        border: 1px solid black;
+        height: 4rem; 
+        flex-grow: 1;
+        min-width: 45rem;
+    }  
+
+
+}
+
