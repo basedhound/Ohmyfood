@@ -22,6 +22,8 @@ body {
 
 h2 {
   font-size: 2.5rem;
+  margin: 0;
+  padding: 1rem;
 }
 
 body {
@@ -45,6 +47,7 @@ header {
   gap: 1.5rem;
   background-color: #F3F3F3;
   padding: 1rem;
+  color: grey;
 }
 .location h2 {
   font-size: 2rem;
@@ -76,10 +79,9 @@ header {
   cursor: pointer;
 }
 .explorer button:hover {
-  transform: scale(1.05);
-  transition: transform 2s;
-  opacity: 0.85;
-  transition: all 2s;
+  transform: scale(1.025);
+  transition: transform 250ms;
+  opacity: 0.9;
 }
 
 .tutorial {
@@ -141,12 +143,13 @@ header {
 .restaurants {
   background-color: #F3F3F3;
   margin-top: 5rem;
-  padding-top: 2.5rem;
+  padding: 2rem 2rem;
 }
+
 .restaurants__cards {
   list-style: none;
   padding-left: 0;
-  gap: 2rem;
+  gap: 3rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
@@ -155,11 +158,41 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.restaurants .card {
+
+.card {
   border: 1px solid black;
-  height: 4rem;
-  flex-grow: 1;
-  min-width: 45rem;
+  height: 25rem;
+  display: block;
+  background-color: white;
+  border: none;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card:hover {
+  transform: scale(1.025);
+  transition: transform 250ms;
+  opacity: 0.9;
+  color: #9356DC;
+}
+.card img {
+  object-fit: cover;
+  height: 70%;
+  width: 100%;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+.card footer {
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  line-height: 2.25rem;
+}
+.card h3 {
+  margin: 0;
+}
+.card p {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

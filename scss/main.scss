@@ -13,38 +13,72 @@
 @import "./layout/02\ explorer.scss";
 @import "./layout/03\ tutorial.scss";
 
+
+
 .restaurants { 
     background-color: $color-4;
     margin-top: 5rem;
-    padding-top: 2.5rem;
+    padding: 2rem 2rem;
+}
     
-    &__cards { 
-        list-style: none;
-        padding-left: 0;
-        gap: 2rem;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+.restaurants__cards { 
+    list-style: none;
+    padding-left: 0;
+    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 
-
- 
-        @media (min-width: 1000px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-
-
-
-
-
+    @media (min-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .card {
+}
+
+.card {
         border: 1px solid black;
-        height: 4rem; 
-        flex-grow: 1;
-        min-width: 45rem;
+        height: 25rem; 
+        display: block;
+        background-color: white;
+        border: none;
+        border-radius: 2rem;
+        text-decoration: none;
+        color: black;
+        @include base-shadow;
+
+        &:hover {
+            @include zoom;
+            opacity: 0.90;   
+            color: $color-1;         
+        }
+       
+        img {
+                object-fit: cover;
+                height: 70%;
+                width: 100%;
+                border-radius: 2rem 2rem 0rem 0rem;      
+        }
+
+        footer {
+            // margin: ;
+            
+            // padding-top: 1rem;
+            padding-left: 1.5rem;
+            padding-top: 1rem;
+            line-height: 2.25rem;
+        }
+
+        h3 {
+            margin: 0;      
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
     }  
 
 
-}
+
+
 
