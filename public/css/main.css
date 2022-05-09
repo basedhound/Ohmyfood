@@ -73,20 +73,20 @@ header {
   border: none;
   font-size: 1.7rem;
   font-weight: 500;
-  color: white;
+  color: whitesmoke;
   margin-top: 1rem;
   margin-bottom: 4rem;
   cursor: pointer;
 }
 .explorer button:hover {
-  transform: scale(1.025);
-  transition: transform 250ms;
-  opacity: 0.9;
+  transition: all 0.2s ease-in-out;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
 }
 
 .tutorial {
   counter-reset: tuto;
-  padding: 2.5rem 1rem 0rem 1rem;
+  padding: 2rem 2rem;
 }
 .tutorial ol {
   display: flex;
@@ -145,8 +145,7 @@ header {
   margin-top: 5rem;
   padding: 2rem 2rem;
 }
-
-.restaurants__cards {
+.restaurants__list {
   list-style: none;
   padding-left: 0;
   gap: 3rem;
@@ -154,12 +153,11 @@ header {
   grid-template-columns: repeat(1, 1fr);
 }
 @media (min-width: 1000px) {
-  .restaurants__cards {
+  .restaurants__list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-.card {
+.restaurants__card {
   border: 1px solid black;
   height: 25rem;
   display: block;
@@ -169,30 +167,45 @@ header {
   text-decoration: none;
   color: black;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
 }
-.card:hover {
+.restaurants__card:hover {
   transform: scale(1.025);
   transition: transform 250ms;
-  opacity: 0.9;
   color: #9356DC;
+  padding: 0;
 }
-.card img {
+.restaurants__card img {
   object-fit: cover;
   height: 70%;
   width: 100%;
   border-radius: 2rem 2rem 0rem 0rem;
 }
-.card footer {
-  padding-left: 1.5rem;
-  padding-top: 1rem;
-  line-height: 2.25rem;
+.restaurants__card footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0 0 2rem;
 }
-.card h3 {
-  margin: 0;
+.restaurants__card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
-.card p {
-  margin: 0;
-  font-size: 1.5rem;
+.restaurants__card p {
+  margin: 0rem;
+  font-size: 1.8rem;
+}
+.restaurants__card--new {
+  position: relative;
+}
+.restaurants__card--new::before {
+  content: "Nouveau";
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 1rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */

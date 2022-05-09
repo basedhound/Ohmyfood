@@ -1,0 +1,87 @@
+//! 04 : RESTAURANTS
+
+.restaurants { 
+    background-color: $color-4;
+    margin-top: 5rem;
+    padding: 2rem 2rem;
+
+    
+    &__list { 
+        list-style: none;
+        padding-left: 0;
+        gap: 3rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        @media (min-width: 1000px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+    &__card {
+            border: 1px solid black;
+            height: 25rem; 
+            display: block;
+            background-color: white;
+            border: none;
+            border-radius: 2rem;
+            text-decoration: none;
+            color: black;
+            @include base-shadow;
+            position: relative;
+
+            &:hover {
+                @include zoom;
+                // opacity: 90%; //BLURRY ON CHROME NEED FIX
+                color: $color-1;  
+                padding: 0;       
+            }
+        
+            & img {
+                    object-fit: cover;
+                    height: 70%;
+                    width: 100%;
+                    border-radius: 2rem 2rem 0rem 0rem;  
+                                      
+                }
+
+            & footer {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem 0 0 2rem;
+            }
+
+            & h3 {
+                margin-top: 0;
+                margin-bottom: 0.5rem;  
+            }
+
+            & p {
+                margin: 0rem;
+                font-size: 1.8rem;
+            }
+
+            //! RUBAN "NOUVEAU"
+            &--new { 
+                position: relative;
+                 
+
+                &::before { 
+                    content: "Nouveau";
+                    position: absolute;
+                    right: 1rem;
+                    top: 1rem;
+                    padding: 1rem;
+                    background-color: $color-3;
+                    color: darken($color-3, 50%);
+                    font-weight: 500;
+                }
+            }
+
+
+
+        }  
+
+
+}
