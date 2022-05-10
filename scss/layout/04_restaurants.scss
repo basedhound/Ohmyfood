@@ -20,23 +20,23 @@
 
 
     &__card {
-            border: 1px solid black;
-            height: 25rem; 
-            display: block;
-            background-color: white;
-            border: none;
-            border-radius: 2rem;
-            text-decoration: none;
-            color: black;
-            @include base-shadow;
-            position: relative;
+        @include base-shadow;
+        position: relative;
+        border: 1px solid black;
+        height: 25rem; 
+        display: block;
+        background-color: white;
+        border: none;
+        border-radius: 2rem;
+        text-decoration: none;
+        color: black;
 
-            &:hover {
-                @include zoom;
-                // opacity: 90%; //BLURRY ON CHROME NEED FIX
-                color: $color-1;  
-                padding: 0;       
-            }
+        &:hover {
+            @include zoom;
+            // opacity: 90%; //BLURRY ON CHROME NEED FIX
+            color: $color-1;  
+            padding: 0;       
+        }
         
             & img {
                     object-fit: cover;
@@ -44,23 +44,36 @@
                     width: 100%;
                     border-radius: 2rem 2rem 0rem 0rem;  
                                       
+            }
+
+            & footer {  
+
+                padding-left: 2rem;    
+                padding-top: 1rem;
+                line-height: 2.25rem;               
+
+                & h3 {                             
+                font-size: 2rem;
+                margin: 0;
+                padding: 0;
                 }
 
-            & footer {
-                display: flex;
-                flex-direction: column;
-                padding: 1rem 0 0 2rem;
+                & p {
+                font-size: 1.7rem;
+                margin: 0;
+                padding: 0;
+                }
+
+                & i {
+                    position: absolute;
+                    font-size: 3rem;
+                    right: 2rem;
+                    bottom: 2.5rem;
+
+                }
+
             }
 
-            & h3 {
-                margin-top: 0;
-                margin-bottom: 0.5rem;  
-            }
-
-            & p {
-                margin: 0rem;
-                font-size: 1.8rem;
-            }
 
             //! RUBAN "NOUVEAU"
             &--new { 
@@ -81,7 +94,7 @@
 
 
 
-        }  
+    }  
 
 
 }

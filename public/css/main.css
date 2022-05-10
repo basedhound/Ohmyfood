@@ -79,9 +79,11 @@ header {
   cursor: pointer;
 }
 .explorer button:hover {
-  transition: all 0.2s ease-in-out;
   color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 25px;
+  background-image: linear-gradient(to left top, #FF79DA, #9356DC);
+  opacity: 100%;
+  transition: all 0.2s ease-in-out;
 }
 
 .tutorial {
@@ -114,8 +116,12 @@ header {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .tutorial li:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 25px;
   background-color: #f5edff;
-  transition: all 0.5s;
+  transition: all 0.4s;
+}
+.tutorial li:hover > i {
+  color: #9356DC;
 }
 .tutorial li i {
   margin-right: 1rem;
@@ -158,6 +164,8 @@ header {
   }
 }
 .restaurants__card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
   border: 1px solid black;
   height: 25rem;
   display: block;
@@ -166,8 +174,6 @@ header {
   border-radius: 2rem;
   text-decoration: none;
   color: black;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  position: relative;
 }
 .restaurants__card:hover {
   transform: scale(1.025);
@@ -182,17 +188,25 @@ header {
   border-radius: 2rem 2rem 0rem 0rem;
 }
 .restaurants__card footer {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0 0 2rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  line-height: 2.25rem;
 }
-.restaurants__card h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+.restaurants__card footer h3 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
 }
-.restaurants__card p {
-  margin: 0rem;
-  font-size: 1.8rem;
+.restaurants__card footer p {
+  font-size: 1.7rem;
+  margin: 0;
+  padding: 0;
+}
+.restaurants__card footer i {
+  position: absolute;
+  font-size: 3rem;
+  right: 2rem;
+  bottom: 2.5rem;
 }
 .restaurants__card--new {
   position: relative;

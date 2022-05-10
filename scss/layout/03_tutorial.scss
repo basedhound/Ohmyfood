@@ -31,8 +31,12 @@
         cursor:default;
         @include base-shadow;
         &:hover {
+         @include hover-shadow;
         background-color: #f5edff;
-        transition: all 0.5s;
+        transition: all 0.4s;        
+            > i {
+            color: $color-1;
+            }
         }
         
         & i {
@@ -41,7 +45,7 @@
             font-size: 2rem;
             padding: 1rem;
         } 
-
+     
         &::before {
             counter-increment: tuto;
             content: counter(tuto); //Toujours mettre un content après un before

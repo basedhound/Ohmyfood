@@ -28,9 +28,11 @@
  
 
         &:hover {
-            transition: all 0.2s ease-in-out;
             color: white;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;                
+            @include hover-shadow;
+            background-image: linear-gradient(to left top, $color-2, $color-1);   
+            opacity: 100%; 
+            transition: all 0.2s ease-in-out;                       
         }
     }
    
