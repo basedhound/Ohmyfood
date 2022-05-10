@@ -73,7 +73,7 @@ header {
   border: none;
   font-size: 1.7rem;
   font-weight: 500;
-  color: whitesmoke;
+  color: #F3F3F3;
   margin-top: 1rem;
   margin-bottom: 4rem;
   cursor: pointer;
@@ -88,7 +88,7 @@ header {
 
 .tutorial {
   counter-reset: tuto;
-  padding: 2rem 2rem;
+  padding: 2rem 2.5rem;
 }
 .tutorial ol {
   display: flex;
@@ -149,7 +149,7 @@ header {
 .restaurants {
   background-color: #F3F3F3;
   margin-top: 5rem;
-  padding: 2rem 2rem;
+  padding: 2rem 2.5rem;
 }
 .restaurants__list {
   list-style: none;
@@ -157,6 +157,7 @@ header {
   gap: 3rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 5rem;
 }
 @media (min-width: 1000px) {
   .restaurants__list {
@@ -220,6 +221,67 @@ header {
   background-color: #99E2D0;
   color: #1b6150;
   font-weight: 500;
+}
+
+.mainfooter {
+  background-color: #353535;
+  padding: 3rem 2.5rem;
+}
+.mainfooter a {
+  text-decoration: none;
+  color: white;
+}
+.mainfooter a:hover {
+  color: #FF79DA;
+}
+.mainfooter h2 {
+  font-family: "Shrikhand", "cursive";
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: white;
+  padding: 0;
+}
+.mainfooter ul {
+  list-style: none;
+  padding: 0;
+}
+.mainfooter i {
+  padding-right: 1rem;
+}
+.mainfooter li {
+  text-decoration: none;
+  color: white;
+  line-height: 2.75rem;
+  font-size: 1.7rem;
+}
+
+.mainfooter {
+  background-color: #353535;
+  padding: 3rem 2.5rem;
+}
+.mainfooter a {
+  text-decoration: none;
+  color: white;
+}
+.mainfooter h2 {
+  font-family: "Shrikhand", "cursive";
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: white;
+  padding: 0;
+}
+.mainfooter ul {
+  list-style: none;
+  padding: 0;
+}
+.mainfooter i {
+  padding-right: 1rem;
+}
+.mainfooter li {
+  text-decoration: none;
+  color: white;
+  line-height: 2.75rem;
+  font-size: 1.7rem;
 }
 
 /*# sourceMappingURL=main.css.map */

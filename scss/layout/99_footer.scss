@@ -1,19 +1,4 @@
-//!  MAIN SCSS : IMPORTS
-
-//* BASE
-@import "./base";
-
-//* UTILS
-@import "./utils/mixins";
-@import "./utils/variables";
-
-//* LAYOUT
-@import "./layout/00_header.scss";
-@import "./layout/01_location.scss";
-@import "./layout/02_explorer.scss";
-@import "./layout/03_tutorial.scss";
-@import "./layout/04_restaurants.scss";
-@import "./layout/99_footer.scss";
+//! FOOTER
 
 .mainfooter { 
     background-color: #353535;
@@ -22,6 +7,9 @@
     a {
         text-decoration: none;
         color: white;
+        &:hover { 
+            color: $color-2 ;
+        }
     }
 
     h2 {
@@ -46,6 +34,7 @@
         color: white;
         line-height: 2.75rem;
         font-size: 1.7rem;
+
     }
 
 }
