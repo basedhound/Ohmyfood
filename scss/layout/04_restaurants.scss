@@ -34,6 +34,7 @@
 
         &:hover {
             @include zoom;
+            @include hover-shadow;
             // opacity: 90%; //BLURRY ON CHROME NEED FIX
             color: $color-1;  
             padding: 0;       
@@ -44,10 +45,10 @@
                     height: 70%;
                     width: 100%;
                     border-radius: 2rem 2rem 0rem 0rem;  
-                                      
+                                                       
             }
 
-            & footer {  
+            .card__footer {  
 
                 padding-left: 2rem;    
                 padding-top: 1rem;
@@ -77,10 +78,7 @@
 
 
             //! RUBAN "NOUVEAU"
-            &--new { 
-                position: relative;
-                 
-
+            &--new {                                
                 &::before { 
                     content: "Nouveau";
                     position: absolute;
@@ -89,8 +87,9 @@
                     padding: 1rem;
                     background-color: $color-3;
                     color: darken($color-3, 50%);
-                    font-weight: 500;
+                    font-weight: 500;                    
                 }
+                
             }
 
 

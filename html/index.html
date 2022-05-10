@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ohmyfood!</title>
+    <title>Ohmyfood</title>
     <script src="https://kit.fontawesome.com/b85f9211b3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./../public/css/normalize.css">
     <link rel="stylesheet" href="./../public/css/main.css">  
@@ -12,7 +12,7 @@
   <body>
 
     <!--! 00 - HEADER -->
-    <header>
+    <header class="main-header">
       <h1>ohmyfood</h1>
     </header>
 
@@ -57,13 +57,14 @@
       <!-- section.restaurants>article.card*4{Restaurant$} -->
 
       <section class="restaurants" id="restaurants">
+
         <h2>Restaurants</h2>
-        <ul class="restaurants__list">
-          
+
+        <ul class="restaurants__list">          
           <li>
             <a href="#" class="restaurants__card restaurants__card--new" alt="Restaurant 1">
               <img src="../public/img/restaurant-1.jpg" alt="La palette du goût (image)">            
-              <footer>
+              <footer class="card__footer">
                 <h3>La palette du goût</h3>
                 <p>Ménilmontant</p>
                 <i class="far fa-heart"></i>
@@ -74,7 +75,7 @@
           <li>
             <a href="#" class="restaurants__card restaurants__card--new" alt="Restaurant 1">
               <img src="../public/img/restaurant-2.jpg" alt="La note enchantée (image)">            
-              <footer>
+              <footer class="card__footer">
                 <h3>La note enchantée</h3>
                 <p>Charonne</p>
                 <i class="far fa-heart"></i>
@@ -85,7 +86,7 @@
           <li>
             <a href="#" class="restaurants__card" alt="Restaurant 1">
               <img src="../public/img/restaurant-3.jpg" alt=">À la française (image)">            
-              <footer>
+              <footer class="card__footer">
                 <h3>À la française</h3>
                 <p>Cité Rouge</p>
                 <i class="far fa-heart"></i>
@@ -96,7 +97,7 @@
           <li>
             <a href="#" class="restaurants__card" alt="Restaurant 1">
               <img src="../public/img/restaurant-4.jpg" alt="Le délice des sens (image)">            
-              <footer>
+              <footer class="card__footer">
                 <h3>Le délice des sens</h3>
                 <p>Folie-Méricourt</p>
                 <i class="far fa-heart"></i>
@@ -108,24 +109,19 @@
       </section>
     </main>
 
-    <!--! FOOTER -->
-<!-- footer>h2{ohmyfood}+ul>a>li*4>a -->
+  <!--! FOOTER -->
+  <footer class="main-footer">
+    <a href="#"><h2>ohmyfood</a></h2>
+    <ul>
+      <a href="">
+        <li><a href="#"><i class="fa-solid fa-utensils fa-lg"></i>Proposer un restaurant</a></li>
+        <li><a href="#"><i class="fa-solid fa-handshake-angle fa-sm"></i>Devenir partenaire</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="mailto:franck.vukelic@gmail.com">Contact</a></li>
+      </a>
+    </ul>
+  </footer>
 
 
-<footer class="mainfooter">
-  <a href="#"><h2>ohmyfood</a></h2>
-  <ul>
-    <a href="">
-      <li><a href="#"><i class="fa-solid fa-utensils fa-lg"></i>Proposer un restaurant</a></li>
-      <li><a href="#"><i class="fa-solid fa-handshake-angle fa-sm"></i>Devenir partenaire</a></li>
-      <li><a href="#">Mentions légales</a></li>
-      <li><a href="mailto:franck.vukelic@gmail.com">Contact</a></li>
-    </a>
-  </ul>
-
-
-
-
-</footer>
-  </body>
-
+</body>
+</html>

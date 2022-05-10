@@ -30,7 +30,7 @@ body {
   min-width: 320px;
 }
 
-header {
+.main-header {
   font-family: "Shrikhand", "cursive";
   font-size: 1.5rem;
   text-align: center;
@@ -179,6 +179,7 @@ header {
 .restaurants__card:hover {
   transform: scale(1.025);
   transition: transform 250ms;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 25px;
   color: #9356DC;
   padding: 0;
 }
@@ -188,29 +189,26 @@ header {
   width: 100%;
   border-radius: 2rem 2rem 0rem 0rem;
 }
-.restaurants__card footer {
+.restaurants__card .card__footer {
   padding-left: 2rem;
   padding-top: 1rem;
   line-height: 2.25rem;
 }
-.restaurants__card footer h3 {
+.restaurants__card .card__footer h3 {
   font-size: 2rem;
   margin: 0;
   padding: 0;
 }
-.restaurants__card footer p {
+.restaurants__card .card__footer p {
   font-size: 1.7rem;
   margin: 0;
   padding: 0;
 }
-.restaurants__card footer i {
+.restaurants__card .card__footer i {
   position: absolute;
   font-size: 3rem;
   right: 2rem;
   bottom: 2.5rem;
-}
-.restaurants__card--new {
-  position: relative;
 }
 .restaurants__card--new::before {
   content: "Nouveau";
@@ -223,61 +221,42 @@ header {
   font-weight: 500;
 }
 
-.mainfooter {
-  background-color: #353535;
-  padding: 3rem 2.5rem;
+.menu__header {
+  position: relative;
 }
-.mainfooter a {
-  text-decoration: none;
-  color: white;
-}
-.mainfooter a:hover {
-  color: #FF79DA;
-}
-.mainfooter h2 {
-  font-family: "Shrikhand", "cursive";
-  font-weight: 400;
-  font-size: 2.5rem;
-  color: white;
-  padding: 0;
-}
-.mainfooter ul {
-  list-style: none;
-  padding: 0;
-}
-.mainfooter i {
-  padding-right: 1rem;
-}
-.mainfooter li {
-  text-decoration: none;
-  color: white;
-  line-height: 2.75rem;
-  font-size: 1.7rem;
+.menu__header img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 50rem;
+  z-index: 0;
 }
 
-.mainfooter {
+.main-footer {
   background-color: #353535;
-  padding: 3rem 2.5rem;
+  padding: 2.5rem 2.5rem 1rem;
 }
-.mainfooter a {
+.main-footer a {
   text-decoration: none;
   color: white;
 }
-.mainfooter h2 {
+.main-footer a:hover {
+  color: #FF79DA;
+}
+.main-footer h2 {
   font-family: "Shrikhand", "cursive";
   font-weight: 400;
   font-size: 2.5rem;
   color: white;
   padding: 0;
 }
-.mainfooter ul {
+.main-footer ul {
   list-style: none;
   padding: 0;
 }
-.mainfooter i {
+.main-footer i {
   padding-right: 1rem;
 }
-.mainfooter li {
+.main-footer li {
   text-decoration: none;
   color: white;
   line-height: 2.75rem;

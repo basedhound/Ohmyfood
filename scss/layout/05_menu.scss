@@ -1,0 +1,14 @@
+//! 04 : MENU
+
+.menu__header { 
+
+    position: relative;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 50rem;
+        z-index:0;
+    }
+}
+
