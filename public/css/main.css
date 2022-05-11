@@ -16,18 +16,29 @@ html {
 }
 
 body {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-family: "Roboto", sans-serif;
 }
 
 h2 {
   font-size: 2.5rem;
   margin: 0;
-  padding: 1rem;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 body {
   min-width: 320px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
 }
 
 .main-header {
@@ -38,6 +49,10 @@ body {
   padding: 0.2rem;
   position: relative;
   cursor: pointer;
+}
+.main-header a {
+  text-decoration: none;
+  color: black;
 }
 
 .location {
@@ -51,6 +66,7 @@ body {
 }
 .location h2 {
   font-size: 2rem;
+  padding: 2rem;
 }
 
 .explorer {
@@ -58,9 +74,13 @@ body {
   background-color: #FAFAFA;
   padding: 2rem;
 }
+.explorer h2 {
+  padding: 1rem;
+}
 .explorer p {
   font-size: 1.8rem;
   color: grey;
+  padding: 1rem;
 }
 .explorer button {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -80,7 +100,9 @@ body {
 }
 .explorer button:hover {
   color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 25px;
+  transform: scale(1.025);
+  transition: transform 250ms;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
   background-image: linear-gradient(to left top, #FF79DA, #9356DC);
   opacity: 100%;
   transition: all 0.2s ease-in-out;
@@ -88,7 +110,8 @@ body {
 
 .tutorial {
   counter-reset: tuto;
-  padding: 2rem 2.5rem;
+  padding: 3rem 2rem 1rem 2rem;
+  margin: auto;
 }
 .tutorial ol {
   display: flex;
@@ -116,7 +139,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .tutorial li:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
   background-color: #f5edff;
   transition: all 0.4s;
 }
@@ -149,7 +172,11 @@ body {
 .restaurants {
   background-color: #F3F3F3;
   margin-top: 5rem;
-  padding: 2rem 2.5rem;
+  padding: 2rem 2rem 2rem 2rem;
+}
+.restaurants h2 {
+  margin: auto;
+  padding: 2rem 2rem 2rem 0rem;
 }
 .restaurants__list {
   list-style: none;
@@ -179,7 +206,7 @@ body {
 .restaurants__card:hover {
   transform: scale(1.025);
   transition: transform 250ms;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
   color: #9356DC;
   padding: 0;
 }
@@ -221,42 +248,134 @@ body {
   font-weight: 500;
 }
 
-.menu__header {
-  position: relative;
-}
-.menu__header img {
+.main__banner {
+  max-width: 1280px;
+  margin: auto;
   object-fit: cover;
   width: 100%;
   max-height: 50rem;
   z-index: 0;
 }
 
-.main-footer {
-  background-color: #353535;
+.menu {
+  max-width: 1280px;
+  margin: auto;
   padding: 2.5rem 2.5rem 1rem;
+  border-radius: 3rem 3rem 0 0;
+  background-color: #F3F3F3;
 }
-.main-footer a {
+
+.menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__header h2 {
+  font-family: "Shrikhand", "cursive";
+  padding: 0;
+}
+.menu__header i {
+  font-size: 2.5rem;
+}
+
+.menu__list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 1rem;
+}
+@media (min-width: 1200px) {
+  .menu__list {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}
+.menu__list .menu_card {
+  display: block;
+}
+.menu__list ul {
+  list-style: none;
+  padding: 0;
+  min-width: 100px;
+}
+.menu__list li {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.menu__list li:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+}
+.menu__list li:hover h4 {
+  color: #FF79DA;
+}
+.menu__list h4 {
+  margin: 0;
+}
+.menu__list p {
+  margin: 0;
+}
+
+.menu__footer {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0 0 0;
+}
+
+.menu__button {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  border-radius: 3rem;
+  border: none;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #F3F3F3;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  cursor: pointer;
+}
+.menu__button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+  transform: scale(1.025);
+  transition: transform 250ms;
+  color: white;
+  background-image: linear-gradient(to left top, #FF79DA, #9356DC);
+  opacity: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer {
+  background-color: #353535;
+  display: block;
+  padding: 2rem 0 1rem 2rem;
+}
+.footer a {
   text-decoration: none;
   color: white;
 }
-.main-footer a:hover {
+.footer a:hover {
   color: #FF79DA;
 }
-.main-footer h2 {
+.footer h2 {
   font-family: "Shrikhand", "cursive";
   font-weight: 400;
   font-size: 2.5rem;
   color: white;
   padding: 0;
 }
-.main-footer ul {
+.footer ul {
   list-style: none;
   padding: 0;
 }
-.main-footer i {
+.footer i {
   padding-right: 1rem;
 }
-.main-footer li {
+.footer li {
   text-decoration: none;
   color: white;
   line-height: 2.75rem;

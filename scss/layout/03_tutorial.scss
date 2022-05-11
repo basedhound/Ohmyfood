@@ -2,7 +2,13 @@
 
 .tutorial {
     counter-reset: tuto;
-    padding: 2rem 2.5rem;
+    padding: 3rem 2rem 1rem 2rem;
+
+    margin: auto;
+
+    @media (min-width: 1000px) {
+      
+    }
 
     & ol {
         display: flex;

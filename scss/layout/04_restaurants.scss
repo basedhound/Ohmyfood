@@ -3,9 +3,14 @@
 .restaurants { 
     background-color: $color-4;
     margin-top: 5rem;
-    padding: 2rem 2.5rem;
+    padding: 2rem 2rem 2rem 2rem;
+   
+    h2 {
+        margin: auto;
+        padding: 2rem 2rem 2rem 0rem;
+    }
 
-    
+
     &__list { 
         list-style: none;
         padding-left: 0;
@@ -13,7 +18,6 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         margin-bottom: 5rem ;
-
         @media (min-width: 1000px) {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -49,7 +53,6 @@
             }
 
             .card__footer {  
-
                 padding-left: 2rem;    
                 padding-top: 1rem;
                 line-height: 2.25rem;               
@@ -92,9 +95,6 @@
                 
             }
 
-
-
     }  
-
 
 }

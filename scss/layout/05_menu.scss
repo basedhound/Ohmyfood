@@ -1,14 +1,113 @@
 //! 04 : MENU
 
-.menu__header { 
+.main__banner { 
+    max-width: 1280px;
+    margin: auto;
+    object-fit: cover;
+    width: 100%;
+    max-height: 50rem;
+    z-index: 0;
+}
 
-    position: relative;
+.menu { 
+    max-width: 1280px;
+    margin: auto;
+    padding: 2.5rem 2.5rem 1rem;
+    border-radius: 3rem 3rem 0 0;
+    background-color: $color-4;
 
-    img {
-        object-fit: cover;
-        width: 100%;
-        max-height: 50rem;
-        z-index:0;
+}
+
+.menu__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2 {
+            font-family: "Shrikhand", "cursive"; 
+            padding: 0;
+        }
+
+        i {
+            font-size: 2.5rem;
+        }
+}
+
+
+.menu__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1rem;
+        
+    @media (min-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+
+    .menu_card { 
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        min-width: 100px;
+    }
+
+    li {
+        @include base-shadow;
+        background-color: white;
+        border-radius: 2rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        &:hover {
+            @include hover-shadow;
+            h4 {
+                color: $color-2;
+            }
+        }
+    }
+
+    h4 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
     }
 }
 
+.menu__footer {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0 0 0;
+
+}
+
+.menu__button {
+        @include base-shadow; 
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        background-image: linear-gradient(to right bottom, $color-2, $color-1);
+        border-radius: 3rem;
+        border: none;
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: $color-4;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        cursor: pointer;
+ 
+
+        &:hover {
+            @include hover-shadow;
+            @include zoom;
+            color: white;
+            
+            background-image: linear-gradient(to left top, $color-2, $color-1);   
+            opacity: 100%; 
+            transition: all 0.2s ease-in-out;                       
+        }
+    }
+   

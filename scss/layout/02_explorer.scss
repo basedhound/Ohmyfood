@@ -5,9 +5,14 @@
     background-color: $color-5;
     padding: 2rem;
 
+    h2 {
+        padding: 1rem;
+    }
+
     p {
         font-size: 1.8rem;
         color: grey;
+        padding: 1rem;
     }
 
     button {
@@ -29,6 +34,7 @@
 
         &:hover {
             color: white;
+            @include zoom;
             @include hover-shadow;
             background-image: linear-gradient(to left top, $color-2, $color-1);   
             opacity: 100%; 

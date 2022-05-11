@@ -13,8 +13,8 @@
 
     <!--! 00 - HEADER -->
     <header class="main-header">
-      <h1>ohmyfood</h1>
-    </header>
+      <h1><a href="/html/index.html">ohmyfood</a></h1>
+  </header>
 
     <main>
 
@@ -31,22 +31,26 @@
 
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
 
-        <a href="#restaurants"><button>Explorer nos restaurants</button></a>
+        <button>Explorer nos restaurants</button>
       </section>
 
           
       
       <!--! 03 : TUTORIAL -->
 
-      <!-- section.tutorial>ol>li*3 -->
-
       <section class="tutorial">
+        
+        <div class="container">
+
         <h2>Fonctionnement</h2>
         <ol>
           <li><i class="fa-tuto fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</li>
           <li><i class="fa-tuto fa-solid fa-list-ul"></i>Composez votre menu</li>
           <li><i class="fa-tuto  fa-solid fa-store"></i>Dégustez au restaurant</li>
         </ol>
+
+      </div>
+
       </section>
 
 
@@ -58,11 +62,13 @@
 
       <section class="restaurants" id="restaurants">
 
+      <div class="container">
+
         <h2>Restaurants</h2>
 
         <ul class="restaurants__list">          
           <li>
-            <a href="#" class="restaurants__card restaurants__card--new" alt="Restaurant 1">
+            <a href="/html/resto-1.html" class="restaurants__card restaurants__card--new" alt="Restaurant 1">
               <img src="../public/img/restaurant-1.jpg" alt="La palette du goût (image)">            
               <footer class="card__footer">
                 <h3>La palette du goût</h3>
@@ -73,7 +79,7 @@
           </li>
 
           <li>
-            <a href="#" class="restaurants__card restaurants__card--new" alt="Restaurant 1">
+            <a href="/html/resto-2.html" class="restaurants__card restaurants__card--new" alt="Restaurant 1">
               <img src="../public/img/restaurant-2.jpg" alt="La note enchantée (image)">            
               <footer class="card__footer">
                 <h3>La note enchantée</h3>
@@ -84,7 +90,7 @@
           </li>
 
           <li>
-            <a href="#" class="restaurants__card" alt="Restaurant 1">
+            <a href="/html/resto-3.html" class="restaurants__card" alt="Restaurant 1">
               <img src="../public/img/restaurant-3.jpg" alt=">À la française (image)">            
               <footer class="card__footer">
                 <h3>À la française</h3>
@@ -95,7 +101,7 @@
           </li>
 
           <li>
-            <a href="#" class="restaurants__card" alt="Restaurant 1">
+            <a href="/html/resto-4.html" class="restaurants__card" alt="Restaurant 1">
               <img src="../public/img/restaurant-4.jpg" alt="Le délice des sens (image)">            
               <footer class="card__footer">
                 <h3>Le délice des sens</h3>
@@ -106,22 +112,26 @@
           </li>
 
         </ul>
+      </div>
+
       </section>
     </main>
 
   <!--! FOOTER -->
-  <footer class="main-footer">
-    <a href="#"><h2>ohmyfood</a></h2>
-    <ul>
-      <a href="">
-        <li><a href="#"><i class="fa-solid fa-utensils fa-lg"></i>Proposer un restaurant</a></li>
-        <li><a href="#"><i class="fa-solid fa-handshake-angle fa-sm"></i>Devenir partenaire</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="mailto:franck.vukelic@gmail.com">Contact</a></li>
-      </a>
-    </ul>
-  </footer>
 
+  <footer class="footer">
+
+    <section class="container">
+      <h2><a href="#">ohmyfood</a></h2>
+      <ul>
+          <li><a href="#"><i class="fa-solid fa-utensils fa-lg"></i>Proposer un restaurant</a></li>
+          <li><a href="#"><i class="fa-solid fa-handshake-angle fa-sm"></i>Devenir partenaire</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="mailto:franck.vukelic@gmail.com">Contact</a></li>
+      </ul>
+  </section>
+  
+  </footer>
 
 </body>
 </html>
