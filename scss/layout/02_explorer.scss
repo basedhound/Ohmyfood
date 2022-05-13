@@ -14,32 +14,11 @@
         color: grey;
         padding: 1rem;
     }
+    
 
-    button {
-        @include base-shadow;  
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        background-image: linear-gradient(to right bottom, $color-2, $color-1);
-        border-radius: 3rem;
-        border: none;
-        font-size: 1.7rem;
-        font-weight: 500;
-        color: $color-4;
-        margin-top: 1rem;
-        margin-bottom: 4rem;
-        cursor: pointer;
- 
-
-        &:hover {
-            color: white;
-            @include zoom;
-            @include hover-shadow;
-            background-image: linear-gradient(to left top, $color-2, $color-1);   
-            opacity: 100%; 
-            transition: all 0.2s ease-in-out;                       
-        }
+    &__button {
+        @include button-primary;
     }
-   
+
 }
+

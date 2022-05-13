@@ -1,18 +1,48 @@
 //! MIXINS
 
 @mixin base-shadow {         
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 } 
 
 @mixin hover-shadow {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
 }
 
+
 @mixin zoom {
     transform: scale(1.025);
-    transition: transform 250ms;    
+    transition: transform 0.2s;       
     }
 
-    // transition-duration: 250ms;
-    // transform: scale(1.05);
-    // color: #0065FC;
+
+@mixin ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+@mixin button-primary { 
+    @include base-shadow;  
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-image: linear-gradient(to right bottom, $color-2, $color-1);
+    border-radius: 3rem;
+    border: none;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: $color-4;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    cursor: pointer;       
+    &:hover {
+        color: white;
+        @include zoom;
+        @include hover-shadow;
+        background-image: linear-gradient(to left top, $color-2, $color-1);   
+        filter: brightness(110%);
+        transition: all 0.2s ease-in-out;    
+    }
+} 

@@ -6,19 +6,13 @@
 
     margin: auto;
 
-    @media (min-width: 1000px) {
-      
-    }
-
     & ol {
         display: flex;
         flex-direction: column;
         list-style: none;
         padding-left: 0;
         gap: 4rem;
-
-
-        @media (min-width: 1000px) {
+        @media (min-width: 950px) {
             flex-direction: row;
         }
     }

@@ -1,113 +1,126 @@
-//! 04 : MENU
+//! MENU
 
-.main__banner { 
-    max-width: 1280px;
-    margin: auto;
+.menu-banner { 
     object-fit: cover;
     width: 100%;
-    max-height: 50rem;
-    z-index: 0;
+    display: block;
+    max-height: 50rem;  
 }
 
-.menu { 
+.menu-section { 
     max-width: 1280px;
     margin: auto;
-    padding: 2.5rem 2.5rem 1rem;
+    position: relative;
+    margin-top: -5rem;
+    padding: 2rem 0;
     border-radius: 3rem 3rem 0 0;
     background-color: $color-4;
-
-}
-
-.menu__header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        h2 {
-            font-family: "Shrikhand", "cursive"; 
-            padding: 0;
-        }
-
-        i {
-            font-size: 2.5rem;
-        }
 }
 
 
-.menu__list {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 1rem;
-        
-    @media (min-width: 1200px) {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 1rem;
-    }
+.menu-section__header {
+            padding: 2rem 2.5rem 0rem 2.5rem; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-    .menu_card { 
-        display: block;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        min-width: 100px;
-    }
-
-    li {
-        @include base-shadow;
-        background-color: white;
-        border-radius: 2rem;
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-        &:hover {
-            @include hover-shadow;
-            h4 {
-                color: $color-2;
+            h2 {
+                font-family: "Shrikhand", cursive;             
             }
-        }
-    }
 
-    h4 {
-        margin: 0;
-    }
-
-    p {
-        margin: 0;
-    }
+            i {
+                font-size: 3rem;
+            }
 }
+
+
+
+.menuS {   
+    display: grid;
+    @media (min-width: 920px) {
+        grid-template-columns: repeat(3, 1fr);               
+    }   
+}
+
+.menu {
+overflow: hidden;  
+padding: 2.5rem 2.5rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
+}
+    
+
+.menu__title { 
+    position: relative;
+    text-transform: uppercase;
+    padding: 2rem 0 2rem 0;
+    font-weight: 400;
+
+    &::after {
+        content: "";
+        width: 5rem;
+        height: 0.5rem;
+        background-color: $color-3;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+}
+}
+
+.menu-item {  
+    @include base-shadow;
+    background-color: white;
+    border-radius: 1.5rem;  
+    display: flex;  
+    padding: 2rem;  
+    margin: 2.5rem 0;
+    cursor: pointer; 
+    &:hover {
+        @include hover-shadow;
+        @include zoom;
+    }   
+}
+
+            
+.menu-item__detail { 
+    flex: 1;
+    overflow: hidden;     
+
+    h4, p 
+    {            
+       @include ellipsis            
+    }
+}    
+                                            
+
+.menu-item__price { 
+    display: flex;
+    align-items: flex-end;
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// faire un mixin pour le bouton button primary
+
+
 
 .menu__footer {
     display: flex;
     justify-content: center;
-    padding: 4rem 0 0 0;
-
+    padding: 2rem;
 }
 
-.menu__button {
-        @include base-shadow; 
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        background-image: linear-gradient(to right bottom, $color-2, $color-1);
-        border-radius: 3rem;
-        border: none;
-        font-size: 1.7rem;
-        font-weight: 500;
-        color: $color-4;
-        margin-top: 1rem;
-        margin-bottom: 4rem;
-        cursor: pointer;
- 
 
-        &:hover {
-            @include hover-shadow;
-            @include zoom;
-            color: white;
-            
-            background-image: linear-gradient(to left top, $color-2, $color-1);   
-            opacity: 100%; 
-            transition: all 0.2s ease-in-out;                       
-        }
-    }
-   
+.menu__button { 
+    @include button-primary;
+    padding: 1.5rem 10rem;
+}
