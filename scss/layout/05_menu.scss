@@ -1,13 +1,13 @@
-//! MENU
+//! RESTAURANT
 
-.menu-banner { 
+.restaurant-banner { 
     object-fit: cover;
     width: 100%;
     display: block;
     max-height: 50rem;  
 }
 
-.menu-section { 
+.restaurant { 
     max-width: 1280px;
     margin: auto;
     position: relative;
@@ -17,8 +17,7 @@
     background-color: $color-4;
 }
 
-
-.menu-section__header {
+.restaurant__title {
             padding: 2rem 2.5rem 0rem 2.5rem; 
             display: flex;
             align-items: center;
@@ -34,21 +33,21 @@
 }
 
 
-
-.menuS {   
+.restaurant__menu {   
     display: grid;
     @media (min-width: 920px) {
         grid-template-columns: repeat(3, 1fr);               
     }   
 }
 
-.menu {
+
+.submenu {
 overflow: hidden;  
 padding: 2.5rem 2.5rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
 }
     
 
-.menu__title { 
+.submenu__title { 
     position: relative;
     text-transform: uppercase;
     padding: 2rem 0 2rem 0;
@@ -62,10 +61,11 @@ padding: 2.5rem 2.5rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
         position: absolute;
         left: 0;
         bottom: 0;
-}
+    }
 }
 
-.menu-item {  
+
+.submenu-item {  
     @include base-shadow;
     background-color: white;
     border-radius: 1.5rem;  
@@ -80,18 +80,19 @@ padding: 2.5rem 2.5rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
 }
 
             
-.menu-item__detail { 
+.submenu-item__detail { 
     flex: 1;
     overflow: hidden;     
 
     h4, p 
     {            
-       @include ellipsis            
+       @include ellipsis;
+       line-height: 2.25rem;                 
     }
 }    
                                             
 
-.menu-item__price { 
+.submenu-item__price { 
     display: flex;
     align-items: flex-end;
     font-weight: 900;
@@ -104,23 +105,13 @@ padding: 2.5rem 2.5rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
 
 
 
-
-
-
-
-
-// faire un mixin pour le bouton button primary
-
-
-
-.menu__footer {
+.restaurant__footer {
     display: flex;
     justify-content: center;
     padding: 2rem;
 }
 
-
-.menu__button { 
+.restaurant__button { 
     @include button-primary;
     padding: 1.5rem 10rem;
 }
