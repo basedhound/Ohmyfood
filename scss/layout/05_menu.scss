@@ -1,13 +1,28 @@
-//! RESTAURANT
+//! MENU
 
-.restaurant-banner { 
+// Add "Arrow Return" icon on page header
+// Use Font-awesome as pseudo-element 
+.header--arrow {
+    display: flex;
+    font-size: 2.5rem;  
+    position: absolute;      
+    left: 3rem;
+    top: 50%; //Center 
+    transform: translateY(-50%); //Center 
+        &:hover {
+            color: $color-3;
+        }
+}
+
+.menu-banner { 
     object-fit: cover;
     width: 100%;
     display: block;
-    max-height: 50rem;  
+    max-height: 50rem; 
+    z-index: -1; 
 }
 
-.restaurant { 
+.menu { 
     max-width: 1280px;
     margin: auto;
     position: relative;
@@ -17,7 +32,7 @@
     background-color: $color-4;
 }
 
-.restaurant__title {
+.menu__title {
             padding: 2rem 2.5rem 0rem 2.5rem; 
             display: flex;
             align-items: center;
@@ -33,7 +48,7 @@
 }
 
 
-.restaurant__menu {   
+.menu__list {   
     display: grid;
     @media (min-width: 920px) {
         grid-template-columns: repeat(3, 1fr);               
@@ -50,13 +65,13 @@ padding: 2.5rem 2.5rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
 .submenu__title { 
     position: relative;
     text-transform: uppercase;
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 0 1rem 0;
     font-weight: 400;
 
     &::after {
         content: "";
         width: 5rem;
-        height: 0.5rem;
+        height: 0.4rem;
         background-color: $color-3;
         position: absolute;
         left: 0;
@@ -87,6 +102,7 @@ padding: 2.5rem 2.5rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
     h4, p 
     {            
        @include ellipsis;
+       width: 90%;
        line-height: 2.25rem;                 
     }
 }    
@@ -105,13 +121,13 @@ padding: 2.5rem 2.5rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
 
 
 
-.restaurant__footer {
+.menu__footer {
     display: flex;
     justify-content: center;
     padding: 2rem;
 }
 
-.restaurant__button { 
+.menu__button { 
     @include button-primary;
-    padding: 1.5rem 10rem;
+    padding: 1.75rem 5rem;
 }

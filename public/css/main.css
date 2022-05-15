@@ -50,10 +50,10 @@ ul {
 }
 
 .header {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   text-align: center;
-  box-shadow: 0px 5px 5px lightgrey;
   padding: 0.2rem;
   position: relative;
   cursor: pointer;
@@ -94,18 +94,15 @@ ul {
   padding: 1rem;
 }
 .explorer__button {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  padding: 1.75rem 3rem;
   border-radius: 3rem;
   border: none;
   font-size: 1.7rem;
   font-weight: 500;
   color: #F3F3F3;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 4rem;
   cursor: pointer;
 }
@@ -113,7 +110,7 @@ ul {
   color: white;
   transform: scale(1.025);
   transition: transform 0s;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   background-image: linear-gradient(to left top, #FF79DA, #9356DC);
   filter: brightness(110%);
   transition: all 0.2s ease-in-out;
@@ -147,10 +144,10 @@ ul {
   font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
 }
 .tutorial li:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   background-color: #f5edff;
   transition: all 0.4s;
 }
@@ -203,7 +200,7 @@ ul {
   }
 }
 .restaurants__card {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   position: relative;
   border: 1px solid black;
   height: 25rem;
@@ -217,7 +214,7 @@ ul {
 .restaurants__card:hover {
   transform: scale(1.025);
   transition: transform 0s;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   color: #9356DC;
   padding: 0;
 }
@@ -259,14 +256,27 @@ ul {
   font-weight: 500;
 }
 
-.restaurant-banner {
+.header--arrow {
+  display: flex;
+  font-size: 2.5rem;
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header--arrow:hover {
+  color: #99E2D0;
+}
+
+.menu-banner {
   object-fit: cover;
   width: 100%;
   display: block;
   max-height: 50rem;
+  z-index: -1;
 }
 
-.restaurant {
+.menu {
   max-width: 1280px;
   margin: auto;
   position: relative;
@@ -276,24 +286,24 @@ ul {
   background-color: #F3F3F3;
 }
 
-.restaurant__title {
+.menu__title {
   padding: 2rem 2.5rem 0rem 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.restaurant__title h2 {
+.menu__title h2 {
   font-family: "Shrikhand", cursive;
 }
-.restaurant__title i {
+.menu__title i {
   font-size: 3rem;
 }
 
-.restaurant__menu {
+.menu__list {
   display: grid;
 }
 @media (min-width: 920px) {
-  .restaurant__menu {
+  .menu__list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -306,13 +316,13 @@ ul {
 .submenu__title {
   position: relative;
   text-transform: uppercase;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0 1rem 0;
   font-weight: 400;
 }
 .submenu__title::after {
   content: "";
   width: 5rem;
-  height: 0.5rem;
+  height: 0.4rem;
   background-color: #99E2D0;
   position: absolute;
   left: 0;
@@ -320,7 +330,7 @@ ul {
 }
 
 .submenu-item {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   background-color: white;
   border-radius: 1.5rem;
   display: flex;
@@ -329,7 +339,7 @@ ul {
   cursor: pointer;
 }
 .submenu-item:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   transform: scale(1.025);
   transition: transform 0s;
 }
@@ -342,6 +352,7 @@ ul {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  width: 90%;
   line-height: 2.25rem;
 }
 
@@ -351,34 +362,31 @@ ul {
   font-weight: 900;
 }
 
-.restaurant__footer {
+.menu__footer {
   display: flex;
   justify-content: center;
   padding: 2rem;
 }
 
-.restaurant__button {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+.menu__button {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  padding: 1.75rem 3rem;
   border-radius: 3rem;
   border: none;
   font-size: 1.7rem;
   font-weight: 500;
   color: #F3F3F3;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 4rem;
   cursor: pointer;
-  padding: 1.5rem 10rem;
+  padding: 1.75rem 5rem;
 }
-.restaurant__button:hover {
+.menu__button:hover {
   color: white;
   transform: scale(1.025);
   transition: transform 0s;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   background-image: linear-gradient(to left top, #FF79DA, #9356DC);
   filter: brightness(110%);
   transition: all 0.2s ease-in-out;

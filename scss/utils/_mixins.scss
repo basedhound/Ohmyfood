@@ -1,11 +1,11 @@
 //! MIXINS
 
 @mixin base-shadow {         
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 10px;
 } 
 
 @mixin hover-shadow {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
 }
 
 
@@ -23,18 +23,15 @@
 
 
 @mixin button-primary { 
-    @include base-shadow;  
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    background-image: linear-gradient(to right bottom, $color-2, $color-1);
+    @include base-shadow; 
+    background-image: linear-gradient(to right bottom, $color-2, $color-1); 
+    padding: 1.75rem 3rem;
     border-radius: 3rem;
     border: none;
     font-size: 1.7rem;
     font-weight: 500;
     color: $color-4;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 4rem;
     cursor: pointer;       
     &:hover {
@@ -46,3 +43,4 @@
         transition: all 0.2s ease-in-out;    
     }
 } 
+
