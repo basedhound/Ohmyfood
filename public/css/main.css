@@ -57,11 +57,23 @@ ul {
     transform: scale(1);
   }
 }
-@keyframes fadein {
-  from {
+@keyframes fadein-ltor {
+  0% {
+    transform: translateX(-50%);
     opacity: 0;
   }
-  to {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadein-btt {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -158,7 +170,7 @@ ul {
   }
 }
 .tutorial li {
-  animation: fadein 500ms;
+  animation: fadein-ltr 500ms;
   animation-fill-mode: both;
   position: relative;
   display: flex;
@@ -310,6 +322,7 @@ ul {
   top: 50%;
   transform: translateY(-50%);
   font-size: 3rem;
+  padding: 0;
 }
 #menu-page .menu-banner {
   object-fit: cover;
@@ -354,19 +367,16 @@ ul {
   margin-bottom: -5rem;
 }
 #menu-page .submenu1--anim {
-  animation: upscale 1.5s;
+  animation: fadein-btt 1s;
   animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
 }
 #menu-page .submenu2--anim {
-  animation: upscale 3s;
+  animation: fadein-btt 2s;
   animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
 }
 #menu-page .submenu3--anim {
-  animation: upscale 4s;
+  animation: fadein-btt 3s;
   animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
 }
 #menu-page .submenu__title {
   position: relative;

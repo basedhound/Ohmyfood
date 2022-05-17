@@ -19,7 +19,7 @@
 
     & li {
     //! ANIMATION
-    animation: fadein 500ms;
+    animation: fadein-ltr 500ms;
     animation-fill-mode: both; 
     //! LOOP
     @for $i from 1 through 3 { 

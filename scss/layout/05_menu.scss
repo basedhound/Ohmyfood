@@ -38,6 +38,7 @@
             top: 50%; //Center 
             transform: translateY(-50%);
             font-size: 3rem; 
+            padding: 0; 
         }
     }
 
@@ -95,23 +96,20 @@ margin-bottom: -5rem;
 
 .submenu1--anim {           
     //! ANIMATION
-    animation: upscale 1.5s;
+    animation: fadein-btt 1s;
     animation-fill-mode: both; 
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
 }
 
 .submenu2--anim {          
     //! ANIMATION
-    animation: upscale 3s;
+    animation: fadein-btt 2s;
     animation-fill-mode: both; 
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
 }
 
 .submenu3--anim {    
     //! ANIMATION
-    animation: upscale 4s;
+    animation: fadein-btt 3s;
     animation-fill-mode: both; 
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
 }
   
 

@@ -12,10 +12,26 @@
 // animation-fill-mode: both; 
 
 
-//* Fade in
-@keyframes fadein { 
-    from { opacity: 0; }
-    to   { opacity: 1; }
+@keyframes fadein-ltor { 
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}  
+
+@keyframes fadein-btt { 
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }  
 
 // + ADD TO CSS ELEMENT
