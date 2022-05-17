@@ -2,7 +2,7 @@
 
 .tutorial {
     counter-reset: tuto;
-    padding: 3rem 2rem 1rem 2rem;
+    padding: 3rem 2rem 0.5rem 2rem;
 
     margin: auto;
 
@@ -18,6 +18,15 @@
     }
 
     & li {
+    //! ANIMATION
+    animation: fadein 500ms;
+    animation-fill-mode: both; 
+    //! LOOP
+    @for $i from 1 through 3 { 
+        &:nth-child(#{$i}) {
+            animation-delay: 500ms * $i;
+        }
+    }  
       
         position: relative;
         display: flex;
@@ -31,7 +40,7 @@
         cursor:default;
         @include base-shadow;
         &:hover {
-         @include hover-shadow;
+        @include hover-shadow;
         background-color: #f5edff;
         transition: all 0.4s;        
             > i {

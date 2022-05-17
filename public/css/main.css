@@ -49,10 +49,34 @@ ul {
   list-style: none;
 }
 
+@keyframes upscale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 .header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   font-family: "Shrikhand", cursive;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   padding: 0.2rem;
   position: relative;
@@ -118,7 +142,7 @@ ul {
 
 .tutorial {
   counter-reset: tuto;
-  padding: 3rem 2rem 1rem 2rem;
+  padding: 3rem 2rem 0.5rem 2rem;
   margin: auto;
 }
 .tutorial ol {
@@ -134,6 +158,8 @@ ul {
   }
 }
 .tutorial li {
+  animation: fadein 500ms;
+  animation-fill-mode: both;
   position: relative;
   display: flex;
   align-items: center;
@@ -145,6 +171,15 @@ ul {
   font-size: 1.8rem;
   cursor: default;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
+}
+.tutorial li:nth-child(1) {
+  animation-delay: 500ms;
+}
+.tutorial li:nth-child(2) {
+  animation-delay: 1000ms;
+}
+.tutorial li:nth-child(3) {
+  animation-delay: 1500ms;
 }
 .tutorial li:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
@@ -189,7 +224,7 @@ ul {
 .restaurants__list {
   list-style: none;
   padding-left: 0;
-  gap: 3rem;
+  gap: 4rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   margin-bottom: 5rem;
@@ -200,6 +235,7 @@ ul {
   }
 }
 .restaurants__card {
+  animation: upscale 3s;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   position: relative;
   border: 1px solid black;
@@ -256,27 +292,33 @@ ul {
   font-weight: 500;
 }
 
-.header--arrow {
-  display: flex;
-  font-size: 2.5rem;
+#menu-page .header:hover::before {
+  color: #FF79DA;
+  font-size: 3.5rem;
+}
+#menu-page .header::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
   position: absolute;
   left: 3rem;
   top: 50%;
   transform: translateY(-50%);
+  font-size: 3rem;
 }
-.header--arrow:hover {
-  color: #99E2D0;
-}
-
-.menu-banner {
+#menu-page .menu-banner {
   object-fit: cover;
   width: 100%;
   display: block;
   max-height: 50rem;
   z-index: -1;
 }
-
-.menu {
+#menu-page .menu {
   max-width: 1280px;
   margin: auto;
   position: relative;
@@ -285,41 +327,54 @@ ul {
   border-radius: 3rem 3rem 0 0;
   background-color: #F3F3F3;
 }
-
-.menu__title {
-  padding: 2rem 2.5rem 0rem 2.5rem;
+#menu-page .menu__title {
+  padding: 2rem 3rem 0rem 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.menu__title h2 {
+#menu-page .menu__title h2 {
   font-family: "Shrikhand", cursive;
+  font-size: 2.5rem;
 }
-.menu__title i {
+#menu-page .menu__title i {
   font-size: 3rem;
 }
-
-.menu__list {
+#menu-page .menu__list {
   display: grid;
 }
 @media (min-width: 920px) {
-  .menu__list {
+  #menu-page .menu__list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-.submenu {
+#menu-page .submenu {
   overflow: hidden;
-  padding: 2.5rem 2.5rem;
+  padding: 3rem;
+  margin-bottom: -5rem;
 }
-
-.submenu__title {
+#menu-page .submenu1--anim {
+  animation: upscale 1.5s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+}
+#menu-page .submenu2--anim {
+  animation: upscale 3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+}
+#menu-page .submenu3--anim {
+  animation: upscale 4s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+}
+#menu-page .submenu__title {
   position: relative;
   text-transform: uppercase;
   padding: 2rem 0 1rem 0;
   font-weight: 400;
 }
-.submenu__title::after {
+#menu-page .submenu__title::after {
   content: "";
   width: 5rem;
   height: 0.4rem;
@@ -328,47 +383,42 @@ ul {
   left: 0;
   bottom: 0;
 }
-
-.submenu-item {
+#menu-page .submenu-item {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   background-color: white;
   border-radius: 1.5rem;
   display: flex;
   padding: 2rem;
-  margin: 2.5rem 0;
+  margin: 2rem 0;
   cursor: pointer;
 }
-.submenu-item:hover {
+#menu-page .submenu-item:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   transform: scale(1.025);
   transition: transform 0s;
 }
-
-.submenu-item__detail {
+#menu-page .submenu-item__detail {
   flex: 1;
   overflow: hidden;
 }
-.submenu-item__detail h4, .submenu-item__detail p {
+#menu-page .submenu-item__detail h4, #menu-page .submenu-item__detail p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   width: 90%;
   line-height: 2.25rem;
 }
-
-.submenu-item__price {
+#menu-page .submenu-item__price {
   display: flex;
   align-items: flex-end;
   font-weight: 900;
 }
-
-.menu__footer {
+#menu-page .menu__footer {
   display: flex;
   justify-content: center;
   padding: 2rem;
 }
-
-.menu__button {
+#menu-page .menu__button {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
   padding: 1.75rem 3rem;
@@ -381,8 +431,9 @@ ul {
   margin-bottom: 4rem;
   cursor: pointer;
   padding: 1.75rem 6rem;
+  margin-top: 4rem;
 }
-.menu__button:hover {
+#menu-page .menu__button:hover {
   color: white;
   transform: scale(1.025);
   transition: transform 0s;

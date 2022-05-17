@@ -2,17 +2,45 @@
 
 // Add "Arrow Return" icon on page header
 // Use Font-awesome as pseudo-element 
-.header--arrow {
-    display: flex;
-    font-size: 2.5rem;  
-    position: absolute;      
-    left: 3rem;
-    top: 50%; //Center 
-    transform: translateY(-50%); //Center 
-        &:hover {
-            color: $color-3;
+
+
+// .header--arrow {
+//     display: flex;
+//      
+//     position: absolute;      
+//     left: 3rem;
+//     top: 50%; //Center 
+//     transform: translateY(-50%); //Center 
+//         &:hover {
+//             color: $color-2;
+//             font-size: 3.5rem;
+//         }
+// }
+
+
+#menu-page {
+    
+    .header {
+        &:hover::before {
+        color: $color-2;
+        font-size: 3.5rem;  
         }
-}
+
+        &::before { 
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f060";
+            position: absolute;
+            left: 3rem;
+            top: 50%; //Center 
+            transform: translateY(-50%);
+            font-size: 3rem; 
+        }
+    }
+
 
 .menu-banner { 
     object-fit: cover;
@@ -33,13 +61,14 @@
 }
 
 .menu__title {
-            padding: 2rem 2.5rem 0rem 2.5rem; 
+            padding: 2rem 3rem 0rem 3rem; 
             display: flex;
             align-items: center;
             justify-content: space-between;
 
             h2 {
-                font-family: "Shrikhand", cursive;             
+                font-family: "Shrikhand", cursive;  
+                font-size: 2.5rem;           
             }
 
             i {
@@ -51,18 +80,42 @@
 .menu__list {   
     display: grid;
     @media (min-width: 920px) {
-        grid-template-columns: repeat(3, 1fr);               
-    }   
+        grid-template-columns: repeat(3, 1fr);        
+    }  
 }
 
 
 .submenu {
 overflow: hidden;  
-padding: 2.5rem 2.5rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
-}
-    
+padding: 3rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
+margin-bottom: -5rem;
 
-.submenu__title { 
+}
+
+
+.submenu1--anim {           
+    //! ANIMATION
+    animation: upscale 1.5s;
+    animation-fill-mode: both; 
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+}
+
+.submenu2--anim {          
+    //! ANIMATION
+    animation: upscale 3s;
+    animation-fill-mode: both; 
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+}
+
+.submenu3--anim {    
+    //! ANIMATION
+    animation: upscale 4s;
+    animation-fill-mode: both; 
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+}
+  
+
+.submenu__title {
     position: relative;
     text-transform: uppercase;
     padding: 2rem 0 1rem 0;
@@ -86,13 +139,19 @@ padding: 2.5rem 2.5rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
     border-radius: 1.5rem;  
     display: flex;  
     padding: 2rem;  
-    margin: 2.5rem 0;
+    margin: 2rem 0;
     cursor: pointer; 
     &:hover {
         @include hover-shadow;
         @include zoom;
-    }   
+    }      
 }
+
+
+
+
+
+
 
             
 .submenu-item__detail { 
@@ -117,10 +176,6 @@ padding: 2.5rem 2.5rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
 
 
 
-
-
-
-
 .menu__footer {
     display: flex;
     justify-content: center;
@@ -130,4 +185,9 @@ padding: 2.5rem 2.5rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
 .menu__button { 
     @include button-primary;
     padding: 1.75rem 6rem;
+    margin-top: 4rem;
+}
+
+
+
 }
