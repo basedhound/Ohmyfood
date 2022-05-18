@@ -12,7 +12,7 @@
 // animation-fill-mode: both; 
 
 
-@keyframes fadein-ltor { 
+@keyframes fadein-ltr { 
     0% {
         transform: translateX(-50%);
         opacity: 0;
@@ -25,7 +25,7 @@
 
 @keyframes fadein-btt { 
     0% {
-        transform: translateY(50%);
+        transform: translateY(10%);
         opacity: 0;
     }
     100% {

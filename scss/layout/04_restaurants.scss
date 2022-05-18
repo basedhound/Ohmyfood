@@ -35,14 +35,14 @@
         border: none;
         border-radius: 2rem;
         text-decoration: none;
-        color: black;
-
+        color: black;    
+        
         &:hover {
             @include zoom;
             @include hover-shadow;
-            // opacity: 90%; //BLURRY ON CHROME NEED FIX
-            color: $color-1;  
-            padding: 0;       
+            transition: all 200ms ease-in-out;   
+      
+  
         }
         
             & img {
@@ -53,34 +53,61 @@
                                                        
             }
 
-            .card__footer {  
-                padding-left: 2rem;    
-                padding-top: 1rem;
-                line-height: 2.25rem;               
+            .card__footer { 
+                position: relative; 
+                padding: 1rem 2rem;
+                line-height: 2.25rem; 
+                            
 
                 & h3 {                             
                 font-size: 2rem;
-                margin: 0;
-                padding: 0;
+                width: 75%;
+                @include ellipsis;
                 }
 
                 & p {
                 font-size: 1.7rem;
-                margin: 0;
-                padding: 0;
+                width: 75%;
+                @include ellipsis;
+
+                }                           
+   
+            
+             .card__heart {
+                &::before {
+                    @include heart;                    
                 }
 
-                & i {
-                    position: absolute;
-                    font-size: 3rem;
-                    right: 2rem;
-                    bottom: 2.5rem;
+                &:hover::before {                     
+                    font-size: 3.5rem; 
+                    opacity: 0;                            
+                }  
+
+                &::after {
+                    @include heart; 
+                    @include gradient;                     
+                    opacity: 0;
+                    color: transparent;
+                    font-weight: 900;
+                    font-size: 3rem;    
+                }
+
+                &:hover::after {  
+                    opacity: 1;   
+                    font-size: 3.5rem;        
+                }
+
+                &:focus {
 
                 }
+
+
 
             }
 
 
+
+        }
             //! RUBAN "NOUVEAU"
             &--new {                                
                 &::before { 
@@ -91,7 +118,8 @@
                     padding: 1rem;
                     background-color: $color-3;
                     color: darken($color-3, 50%);
-                    font-weight: 500;                    
+                    font-weight: 500;   
+                    filter: brightness(105%);    
                 }
                 
             }

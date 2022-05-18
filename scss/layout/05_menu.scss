@@ -1,46 +1,32 @@
 //! MENU
 
-// Add "Arrow Return" icon on page header
-// Use Font-awesome as pseudo-element 
-
-
-// .header--arrow {
-//     display: flex;
-//      
-//     position: absolute;      
-//     left: 3rem;
-//     top: 50%; //Center 
-//     transform: translateY(-50%); //Center 
-//         &:hover {
-//             color: $color-2;
-//             font-size: 3.5rem;
-//         }
-// }
-
-
 #menu-page {
     
     .header {
-        &:hover::before {
-        color: $color-2;
-        font-size: 3.5rem;  
+
+        &:hover .header--arrow {
+            color: $color-2;                  
         }
 
-        &::before { 
-            display: inline-block;
-            font-style: normal;
-            font-variant: normal;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f060";
-            position: absolute;
-            left: 3rem;
-            top: 50%; //Center 
-            transform: translateY(-50%);
-            font-size: 3rem; 
-            padding: 0; 
+        &--arrow {      
+            &::before { 
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f060";
+                position: absolute;
+                left: 1.5rem;
+                top: 50%; //Center 
+                transform: translateY(-50%);
+                font-size: 2.5rem; 
+                padding: 0; 
+                transition: all 200ms ease-in-out;
+            }
         }
     }
+    
 
 
 .menu-banner { 
@@ -61,21 +47,42 @@
     background-color: $color-4;
 }
 
-.menu__title {
-            padding: 2rem 3rem 0rem 3rem; 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+.menu__title {      
+            font-family: "Shrikhand", cursive;  
+            padding: 3rem;
+            font-size: 2.5rem;
+            position: relative;
+            padding-right: 7rem; 
+            cursor: default;          
 
-            h2 {
-                font-family: "Shrikhand", cursive;  
-                font-size: 2.5rem;           
-            }
+        }          
 
-            i {
-                font-size: 3rem;
-            }
-}
+.menu__heart { 
+                &::before {
+                    @include heart;
+                }
+
+                &:hover::before {   
+                    font-size: 3.5rem;  
+                    opacity: 0;      
+                }  
+
+                &::after {
+                    @include heart; 
+                    @include gradient;                     
+                    opacity: 0;
+                    color: transparent;
+                    font-weight: 900;
+                    font-size: 3rem;            
+                }
+
+                &:hover::after {  
+                    opacity: 1;   
+                    font-size: 3.5rem;        
+                }
+}      
+       
+
 
 
 .menu__list {   
@@ -88,27 +95,31 @@
 
 .submenu {
 overflow: hidden;  
-padding: 3rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
-margin-bottom: -5rem;
+padding: 0 3rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
+margin-bottom: 2rem;
+
 
 }
 
 
 .submenu1--anim {           
     //! ANIMATION
-    animation: fadein-btt 1s;
+    animation: fadein-btt 1.5s;
+    animation-delay: 250ms;
     animation-fill-mode: both; 
 }
 
 .submenu2--anim {          
     //! ANIMATION
-    animation: fadein-btt 2s;
+    animation: fadein-btt 1.5s;
+    animation-delay: 500ms;
     animation-fill-mode: both; 
 }
 
 .submenu3--anim {    
     //! ANIMATION
-    animation: fadein-btt 3s;
+    animation: fadein-btt 1.5s;
+    animation-delay: 750ms;
     animation-fill-mode: both; 
 }
   
@@ -118,6 +129,7 @@ margin-bottom: -5rem;
     text-transform: uppercase;
     padding: 2rem 0 1rem 0;
     font-weight: 400;
+    cursor: default;
 
     &::after {
         content: "";
@@ -142,12 +154,9 @@ margin-bottom: -5rem;
     &:hover {
         @include hover-shadow;
         @include zoom;
+        transition: all 100ms ease-in-out;
     }      
 }
-
-
-
-
 
 
 
@@ -183,7 +192,8 @@ margin-bottom: -5rem;
 .menu__button { 
     @include button-primary;
     padding: 1.75rem 6rem;
-    margin-top: 4rem;
+    margin: 1.5rem;
+
 }
 
 

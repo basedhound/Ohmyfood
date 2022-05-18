@@ -19,6 +19,7 @@
 
     &__button {
         @include button-primary;
+        margin: 3rem;
     }
 
 }

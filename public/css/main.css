@@ -32,13 +32,17 @@ h4 {
   font-size: 1.8rem;
 }
 
+body {
+  min-width: 280px;
+}
+
 .container {
   max-width: 1280px;
   margin: auto;
   position: relative;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, form {
   padding: 0;
   margin: 0;
 }
@@ -57,7 +61,7 @@ ul {
     transform: scale(1);
   }
 }
-@keyframes fadein-ltor {
+@keyframes fadein-ltr {
   0% {
     transform: translateX(-50%);
     opacity: 0;
@@ -69,7 +73,7 @@ ul {
 }
 @keyframes fadein-btt {
   0% {
-    transform: translateY(50%);
+    transform: translateY(10%);
     opacity: 0;
   }
   100% {
@@ -113,7 +117,7 @@ ul {
 }
 .location h2 {
   font-size: 2rem;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .explorer {
@@ -138,9 +142,8 @@ ul {
   font-size: 1.7rem;
   font-weight: 500;
   color: #F3F3F3;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
   cursor: pointer;
+  margin: 3rem;
 }
 .explorer__button:hover {
   color: white;
@@ -149,7 +152,7 @@ ul {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   background-image: linear-gradient(to left top, #FF79DA, #9356DC);
   filter: brightness(110%);
-  transition: all 0.2s ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .tutorial {
@@ -263,8 +266,7 @@ ul {
   transform: scale(1.025);
   transition: transform 0s;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-  color: #9356DC;
-  padding: 0;
+  transition: all 200ms ease-in-out;
 }
 .restaurants__card img {
   object-fit: cover;
@@ -273,25 +275,78 @@ ul {
   border-radius: 2rem 2rem 0rem 0rem;
 }
 .restaurants__card .card__footer {
-  padding-left: 2rem;
-  padding-top: 1rem;
+  position: relative;
+  padding: 1rem 2rem;
   line-height: 2.25rem;
 }
 .restaurants__card .card__footer h3 {
   font-size: 2rem;
-  margin: 0;
-  padding: 0;
+  width: 75%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .restaurants__card .card__footer p {
   font-size: 1.7rem;
-  margin: 0;
-  padding: 0;
+  width: 75%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.restaurants__card .card__footer i {
+.restaurants__card .card__footer .card__heart::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
   position: absolute;
-  font-size: 3rem;
   right: 2rem;
-  bottom: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+  font-size: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.restaurants__card .card__footer .card__heart:hover::before {
+  font-size: 3.5rem;
+  opacity: 0;
+}
+.restaurants__card .card__footer .card__heart::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+  font-size: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+  background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  opacity: 0;
+  color: transparent;
+  font-weight: 900;
+  font-size: 3rem;
+}
+.restaurants__card .card__footer .card__heart:hover::after {
+  opacity: 1;
+  font-size: 3.5rem;
 }
 .restaurants__card--new::before {
   content: "Nouveau";
@@ -302,13 +357,13 @@ ul {
   background-color: #99E2D0;
   color: #1b6150;
   font-weight: 500;
+  filter: brightness(105%);
 }
 
-#menu-page .header:hover::before {
+#menu-page .header:hover .header--arrow {
   color: #FF79DA;
-  font-size: 3.5rem;
 }
-#menu-page .header::before {
+#menu-page .header--arrow::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -318,11 +373,12 @@ ul {
   font-weight: 900;
   content: "\f060";
   position: absolute;
-  left: 3rem;
+  left: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 0;
+  transition: all 200ms ease-in-out;
 }
 #menu-page .menu-banner {
   object-fit: cover;
@@ -341,17 +397,67 @@ ul {
   background-color: #F3F3F3;
 }
 #menu-page .menu__title {
-  padding: 2rem 3rem 0rem 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-#menu-page .menu__title h2 {
   font-family: "Shrikhand", cursive;
+  padding: 3rem;
   font-size: 2.5rem;
+  position: relative;
+  padding-right: 7rem;
+  cursor: default;
 }
-#menu-page .menu__title i {
+#menu-page .menu__heart::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
   font-size: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+#menu-page .menu__heart:hover::before {
+  font-size: 3.5rem;
+  opacity: 0;
+}
+#menu-page .menu__heart::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+  font-size: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+  background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  opacity: 0;
+  color: transparent;
+  font-weight: 900;
+  font-size: 3rem;
+}
+#menu-page .menu__heart:hover::after {
+  opacity: 1;
+  font-size: 3.5rem;
 }
 #menu-page .menu__list {
   display: grid;
@@ -363,19 +469,22 @@ ul {
 }
 #menu-page .submenu {
   overflow: hidden;
-  padding: 3rem;
-  margin-bottom: -5rem;
+  padding: 0 3rem;
+  margin-bottom: 2rem;
 }
 #menu-page .submenu1--anim {
-  animation: fadein-btt 1s;
+  animation: fadein-btt 1.5s;
+  animation-delay: 250ms;
   animation-fill-mode: both;
 }
 #menu-page .submenu2--anim {
-  animation: fadein-btt 2s;
+  animation: fadein-btt 1.5s;
+  animation-delay: 500ms;
   animation-fill-mode: both;
 }
 #menu-page .submenu3--anim {
-  animation: fadein-btt 3s;
+  animation: fadein-btt 1.5s;
+  animation-delay: 750ms;
   animation-fill-mode: both;
 }
 #menu-page .submenu__title {
@@ -383,6 +492,7 @@ ul {
   text-transform: uppercase;
   padding: 2rem 0 1rem 0;
   font-weight: 400;
+  cursor: default;
 }
 #menu-page .submenu__title::after {
   content: "";
@@ -406,6 +516,7 @@ ul {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   transform: scale(1.025);
   transition: transform 0s;
+  transition: all 100ms ease-in-out;
 }
 #menu-page .submenu-item__detail {
   flex: 1;
@@ -437,11 +548,9 @@ ul {
   font-size: 1.7rem;
   font-weight: 500;
   color: #F3F3F3;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
   cursor: pointer;
   padding: 1.75rem 6rem;
-  margin-top: 4rem;
+  margin: 1.5rem;
 }
 #menu-page .menu__button:hover {
   color: white;
@@ -450,7 +559,7 @@ ul {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   background-image: linear-gradient(to left top, #FF79DA, #9356DC);
   filter: brightness(110%);
-  transition: all 0.2s ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .footer {
