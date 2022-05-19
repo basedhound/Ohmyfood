@@ -4,6 +4,8 @@
 ::before,
 ::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -51,6 +53,15 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.check[type=checkbox] {
+  display: none;
+}
+
+.check[type=checkbox]:checked + label::after {
+  opacity: 1;
+  transition-duration: 0.35s;
 }
 
 @keyframes upscale {
@@ -157,8 +168,11 @@ ul {
 
 .tutorial {
   counter-reset: tuto;
-  padding: 3rem 2rem 0.5rem 2rem;
+  padding: 1rem 2rem;
   margin: auto;
+}
+.tutorial h2 {
+  padding: 2rem 0;
 }
 .tutorial ol {
   display: flex;
@@ -188,13 +202,13 @@ ul {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
 }
 .tutorial li:nth-child(1) {
-  animation-delay: 500ms;
+  animation-delay: 750ms;
 }
 .tutorial li:nth-child(2) {
-  animation-delay: 1000ms;
+  animation-delay: 1500ms;
 }
 .tutorial li:nth-child(3) {
-  animation-delay: 1500ms;
+  animation-delay: 2250ms;
 }
 .tutorial li:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
@@ -560,6 +574,73 @@ ul {
   background-image: linear-gradient(to left top, #FF79DA, #9356DC);
   filter: brightness(110%);
   transition: all 200ms ease-in-out;
+}
+
+@keyframes loader-fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+.loader {
+  position: fixed;
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.9;
+  z-index: 10;
+  animation: loader-fadeout 200ms;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+@keyframes grow-bars {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+.loader__bars::before {
+  content: "";
+  display: flex;
+  width: 15px;
+  height: 50px;
+  background-color: #9356DC;
+  animation: grow-bars 1.5s linear -1s infinite;
+}
+
+.loader__bars span {
+  content: "";
+  display: flex;
+  width: 15px;
+  height: 50px;
+  background-color: #FF79DA;
+  animation: grow-bars 1.5s linear -0.5s infinite;
+}
+
+.loader__bars::after {
+  content: "";
+  display: flex;
+  width: 15px;
+  height: 50px;
+  background-color: #99E2D0;
+  animation: grow-bars 1.5s linear infinite;
 }
 
 .footer {

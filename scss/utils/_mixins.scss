@@ -42,7 +42,9 @@
     }
 } 
 
-
+@mixin gradient {
+    background-image: linear-gradient(to right bottom, $color-2, $color-1);      
+}
 
 @mixin heart {
     // Font Awesome use
@@ -67,7 +69,20 @@
     cursor: pointer;
 }
 
-@mixin gradient {
-    background-image: linear-gradient(to right bottom, $color-2, $color-1);  
+//! Check/Uncheck Hearts
+// Remove default checkbox
+.check[type="checkbox"] {
+    display: none;
 }
+
+.check[type="checkbox"]:checked + label::after {
+    opacity: 1;
+    transition-duration: .35s
+}
+
+
+
+
+
+
 
