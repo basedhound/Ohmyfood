@@ -34,6 +34,11 @@ h4 {
   font-size: 1.8rem;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 body {
   min-width: 280px;
 }
@@ -55,13 +60,12 @@ ul {
   list-style: none;
 }
 
-.check[type=checkbox] {
+.check-heart[type=checkbox] {
   display: none;
 }
 
-.check[type=checkbox]:checked + label::after {
+.check-heart[type=checkbox]:checked + label::after {
   opacity: 1;
-  transition-duration: 0.35s;
 }
 
 @keyframes upscale {
@@ -90,14 +94,6 @@ ul {
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
   }
 }
 .header {
@@ -264,7 +260,6 @@ ul {
   }
 }
 .restaurants__card {
-  animation: upscale 3s;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   position: relative;
   border: 1px solid black;
@@ -275,12 +270,6 @@ ul {
   border-radius: 2rem;
   text-decoration: none;
   color: black;
-}
-.restaurants__card:hover {
-  transform: scale(1.025);
-  transition: transform 0s;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-  transition: all 200ms ease-in-out;
 }
 .restaurants__card img {
   object-fit: cover;
@@ -307,7 +296,8 @@ ul {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.restaurants__card .card__footer .card__heart::before {
+.restaurants__card .restaurant-card__heart::before {
+  position: absolute;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -316,23 +306,21 @@ ul {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f004";
-  position: absolute;
-  right: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
+  cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
   transition: all 200ms ease-in-out;
   font-size: 3rem;
   padding: 1rem;
-  cursor: pointer;
+  right: 2rem;
+  bottom: 1.25rem;
 }
-.restaurants__card .card__footer .card__heart:hover::before {
-  font-size: 3.5rem;
+.restaurants__card .restaurant-card__heart:hover::before {
   opacity: 0;
 }
-.restaurants__card .card__footer .card__heart::after {
+.restaurants__card .restaurant-card__heart::after {
+  position: absolute;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -341,26 +329,22 @@ ul {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f004";
-  position: absolute;
-  right: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
+  cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
   transition: all 200ms ease-in-out;
-  font-size: 3rem;
-  padding: 1rem;
-  cursor: pointer;
   background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
   opacity: 0;
   color: transparent;
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 3.2rem;
+  padding: 1rem;
+  right: 1.9rem;
+  bottom: 1.2rem;
 }
-.restaurants__card .card__footer .card__heart:hover::after {
+.restaurants__card .restaurant-card__heart:hover::after {
   opacity: 1;
-  font-size: 3.5rem;
 }
 .restaurants__card--new::before {
   content: "Nouveau";
@@ -411,14 +395,15 @@ ul {
   background-color: #F3F3F3;
 }
 #menu-page .menu__title {
+  position: relative;
   font-family: "Shrikhand", cursive;
   padding: 3rem;
   font-size: 2.5rem;
-  position: relative;
   padding-right: 7rem;
   cursor: default;
 }
-#menu-page .menu__heart::before {
+#menu-page .menu-title__heart::before {
+  position: absolute;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -427,23 +412,21 @@ ul {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f004";
-  position: absolute;
-  right: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
+  cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
   transition: all 200ms ease-in-out;
   font-size: 3rem;
   padding: 1rem;
-  cursor: pointer;
+  right: 2rem;
+  bottom: 1.75rem;
 }
-#menu-page .menu__heart:hover::before {
-  font-size: 3.5rem;
+#menu-page .menu-title__heart:hover::before {
   opacity: 0;
 }
-#menu-page .menu__heart::after {
+#menu-page .menu-title__heart::after {
+  position: absolute;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -452,26 +435,22 @@ ul {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f004";
-  position: absolute;
-  right: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
+  cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
   transition: all 200ms ease-in-out;
-  font-size: 3rem;
-  padding: 1rem;
-  cursor: pointer;
   background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
   opacity: 0;
   color: transparent;
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 3.2rem;
+  padding: 1rem;
+  right: 1.9rem;
+  bottom: 1.7rem;
 }
-#menu-page .menu__heart:hover::after {
+#menu-page .menu-title__heart:hover::after {
   opacity: 1;
-  font-size: 3.5rem;
 }
 #menu-page .menu__list {
   display: grid;
@@ -574,73 +553,6 @@ ul {
   background-image: linear-gradient(to left top, #FF79DA, #9356DC);
   filter: brightness(110%);
   transition: all 200ms ease-in-out;
-}
-
-@keyframes loader-fadeout {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-.loader {
-  position: fixed;
-  background-color: whitesmoke;
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.9;
-  z-index: 10;
-  animation: loader-fadeout 200ms;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
-  font-size: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-@keyframes grow-bars {
-  0% {
-    transform: scaleY(0);
-    opacity: 0;
-  }
-  50% {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scaleY(0);
-    opacity: 0;
-  }
-}
-.loader__bars::before {
-  content: "";
-  display: flex;
-  width: 15px;
-  height: 50px;
-  background-color: #9356DC;
-  animation: grow-bars 1.5s linear -1s infinite;
-}
-
-.loader__bars span {
-  content: "";
-  display: flex;
-  width: 15px;
-  height: 50px;
-  background-color: #FF79DA;
-  animation: grow-bars 1.5s linear -0.5s infinite;
-}
-
-.loader__bars::after {
-  content: "";
-  display: flex;
-  width: 15px;
-  height: 50px;
-  background-color: #99E2D0;
-  animation: grow-bars 1.5s linear infinite;
 }
 
 .footer {

@@ -47,41 +47,48 @@
     background-color: $color-4;
 }
 
-.menu__title {      
+.menu__title {   
+            position: relative;   
             font-family: "Shrikhand", cursive;  
             padding: 3rem;
             font-size: 2.5rem;
-            position: relative;
             padding-right: 7rem; 
-            cursor: default;          
+            cursor: default;              
+}          
 
-        }          
 
-.menu__heart { 
-                &::before {
-                    @include heart;
-                }
+.menu-title__heart { 
+    &::before {
+        @include heart;
+        //TODO - FIX SIZE & POSITION !  
+        font-size: 3rem;
+        padding: 1rem;      
+        right : 2rem;
+        bottom: 1.75rem;              
+    }
+        &:hover::before {                     
+            opacity: 0;                                                
+        }  
+        
+    &::after {
+        @include heart; 
+        @include gradient;                     
+        opacity: 0;
+        color: transparent;
+        font-weight: 900;
 
-                &:hover::before {   
-                    font-size: 3.5rem;  
-                    opacity: 0;      
-                }  
+        //TODO - FIX SIZE & POSITION ! 
+        font-size: 3.2rem;  
+        padding: 1rem;       
+        right : 1.90rem;
+        bottom: 1.70rem;                                                                                
+    }
 
-                &::after {
-                    @include heart; 
-                    @include gradient;                     
-                    opacity: 0;
-                    color: transparent;
-                    font-weight: 900;
-                    font-size: 3rem;            
-                }
+        &:hover::after {  
+            opacity: 1;                          
+        }
+}
 
-                &:hover::after {  
-                    opacity: 1;   
-                    font-size: 3.5rem;        
-                }
-}      
-       
 
 
 

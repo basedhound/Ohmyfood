@@ -23,9 +23,9 @@
         }
     }
 
-
+// 
     &__card {
-        animation: upscale 3s; 
+        // animation: upscale 3s; 
         @include base-shadow;
         position: relative;
         border: 1px solid black;
@@ -37,13 +37,13 @@
         text-decoration: none;
         color: black;    
         
-        &:hover {
-            @include zoom;
-            @include hover-shadow;
-            transition: all 200ms ease-in-out;   
+        // &:hover {
+        //     @include zoom;
+        //     @include hover-shadow;
+        //     transition: all 200ms ease-in-out;   
       
   
-        }
+        // }
         
             & img {
                     object-fit: cover;
@@ -72,58 +72,68 @@
 
                 }                           
    
-            
-             .card__heart {
-                &::before {
-                    @include heart;                    
-                }
-
-                &:hover::before {                     
-                    font-size: 3.5rem; 
-                    opacity: 0;                            
-                }  
-
-                &::after {
-                    @include heart; 
-                    @include gradient;                     
-                    opacity: 0;
-                    color: transparent;
-                    font-weight: 900;
-                    font-size: 3rem;   
-                    
-                }
-
-                &:hover::after {  
-                    opacity: 1;   
-                    font-size: 3.5rem;        
-                }
-
-                &:focus {
-
-                }
-
-
-
             }
 
 
 
+
+
+//! HEART FAVORITES        
+.restaurant-card__heart {
+
+    &::before {
+        @include heart;
+        //TODO - FIX SIZE & POSITION !  
+        font-size: 3rem;
+        padding: 1rem;      
+        right : 2rem;
+        bottom: 1.25rem;              
+    }
+        &:hover::before {                     
+            opacity: 0;                                                
+        }  
+        
+    &::after {
+        @include heart; 
+        @include gradient;                     
+        opacity: 0;
+        color: transparent;
+        font-weight: 900;
+
+        //TODO - FIX SIZE & POSITION ! 
+        font-size: 3.2rem;  
+        padding: 1rem;       
+        right : 1.90rem;
+        bottom: 1.20rem;                                                                                
+    }
+
+        &:hover::after {  
+            opacity: 1;                          
         }
-            //! RUBAN "NOUVEAU"
-            &--new {                                
-                &::before { 
-                    content: "Nouveau";
-                    position: absolute;
-                    right: 1rem;
-                    top: 1rem;
-                    padding: 1rem;
-                    background-color: $color-3;
-                    color: darken($color-3, 50%);
-                    font-weight: 500;   
-                    filter: brightness(105%);    
-                }
-                
-            }
+}
+
+
+
+
+//! RUBAN "NOUVEAU"
+&--new {                                
+    &::before { 
+        content: "Nouveau";
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        padding: 1rem;
+        background-color: $color-3;
+        color: darken($color-3, 50%);
+        font-weight: 500;   
+        filter: brightness(105%);    
+    }    
+}
+
+
+
+
+
 
     }  
 
