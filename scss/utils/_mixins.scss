@@ -1,6 +1,6 @@
 //! MIXINS
 
-@mixin base-shadow {         
+@mixin box-shadow {         
     box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 10px;
 } 
 
@@ -24,7 +24,7 @@
 }
 
 @mixin button-primary { 
-    @include base-shadow; 
+    @include box-shadow; 
     @include gradient;  
     padding: 1.75rem 3rem;
     border-radius: 3rem;
@@ -61,7 +61,7 @@
 }
 
 //! Check/Uncheck Hearts
-// Remove default checkbox
+// Remove default check-heart
 .check-heart[type="checkbox"] {
     display: none;
 }
@@ -70,7 +70,22 @@
     opacity: 1; 
 }
 
-//! + HOW TO USE IT =
+
+
+
+.check-menu[type="checkbox"] {
+    display: none;
+}
+
+.check-menu[type="checkbox"]:checked + label:hover {
+
+
+}
+
+
+
+
+//TODO =
 
 
 

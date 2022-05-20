@@ -1,6 +1,6 @@
 //!  HEADER : LOGO
 .header {
-    @include base-shadow;
+    @include box-shadow;
     font-family: "Shrikhand", cursive; 
     font-size: 2rem;
     text-align: center;

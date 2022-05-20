@@ -44,7 +44,7 @@
         font-weight: 600; 
         font-size: 1.8rem ;    
         cursor:default;
-        @include base-shadow;
+        @include box-shadow;
         &:hover {
         @include hover-shadow;
         background-color: #f5edff;

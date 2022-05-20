@@ -26,7 +26,7 @@
 // 
     &__card {
         // animation: upscale 3s; 
-        @include base-shadow;
+        @include box-shadow;
         position: relative;
         border: 1px solid black;
         height: 25rem; 
