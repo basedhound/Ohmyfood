@@ -2,7 +2,7 @@
 .header {
     @include box-shadow;
     font-family: "Shrikhand", cursive; 
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     padding: 0.2rem;
     position: relative;
@@ -16,5 +16,9 @@
         text-decoration: none;
         color: black;
     }
+
+    @media (min-width: 320px) {
+        font-size: 2rem;        
+    }  
 
 }

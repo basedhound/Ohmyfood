@@ -25,7 +25,7 @@
 
 // 
     &__card {
-        // animation: upscale 3s; 
+        animation: upscale 3s; 
         @include box-shadow;
         position: relative;
         border: 1px solid black;
@@ -37,13 +37,13 @@
         text-decoration: none;
         color: black;    
         
-        // &:hover {
-        //     @include zoom;
-        //     @include hover-shadow;
-        //     transition: all 200ms ease-in-out;   
+        &:hover {
+            @include zoom;
+            @include hover-shadow;
+            transition: all 200ms ease-in-out;   
       
   
-        // }
+        }
         
             & img {
                     object-fit: cover;

@@ -1,5 +1,7 @@
-//! MENU
+//! MENU PAGE
 
+
+//! MENU - HEADER / ARROW RETURN
 .header {
 
     &:hover .header--arrow {
@@ -8,29 +10,36 @@
 
     &--arrow {      
         &::before { 
+            //! Fontawesome
             display: inline-block;
             font-style: normal;
             font-variant: normal;
             text-rendering: auto;
             -webkit-font-smoothing: antialiased;
-            font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f060";
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f060";
+            //! Settings
             position: absolute;
             left: 1.5rem;
-            top: 50%; //Center 
+            top: 50%;  
             transform: translateY(-50%);
-            font-size: 2.5rem; 
-            padding: 0; 
+            font-size: 2rem;              
             transition: all 200ms ease-in-out;
+
+            @media (min-width: 320px) {
+                font-size: 2.5rem;        
+            }  
         }
     }
 }
 
+//! MENU - HEADER + ARROW RETURN
 .menu-banner { 
     object-fit: cover;
     width: 100%;
     display: block;
     max-height: 50rem; 
-    z-index: -1; 
 }
 
 .menu { 
@@ -46,89 +55,100 @@
 .menu__title {   
             position: relative;   
             font-family: "Shrikhand", cursive;  
-            padding: 3rem;
+            padding: 2rem 2rem;
             font-size: 2.5rem;
             padding-right: 7rem; 
-            cursor: default;              
+            cursor: default; 
+            
+            @media (min-width: 950px) {
+                padding: 2rem 3rem;    
+            } 
+            
 }          
-
-
 
 
 .menu-title__heart { 
     &::before {
         @include heart;
-        //TODO - FIX SIZE & POSITION !  
-        font-size: 3rem;
-        padding: 1rem;      
+        //! SIZE & POSITION
+        font-size: 3rem;              
         right : 2rem;
-        bottom: 1.75rem;              
+        bottom: 1.75rem;         
+        @media (min-width: 950px) {
+            right : 3rem;
+        } 
     }
-        &:hover::before {                     
-            opacity: 0;                                                
-        }  
+            &:hover::before {                     
+                opacity: 0;                                                
+            }  
         
     &::after {
         @include heart; 
         @include gradient;                     
-        opacity: 0;
         color: transparent;
+        opacity: 0;
         font-weight: 900;
 
-        //TODO - FIX SIZE & POSITION ! 
-        font-size: 3.2rem;  
-        padding: 1rem;       
+        //! SIZE & POSITION
+        font-size: 3.2rem;      
         right : 1.90rem;
-        bottom: 1.70rem;                                                                                
+        bottom: 1.70rem;
+        @media (min-width: 950px) {
+            right : 2.90rem;
+        } 
     }
-
-        &:hover::after {  
-            opacity: 1;                          
-        }
+            &:hover::after {  
+                opacity: 1;                          
+            }
 }
 
 
 
 
-.menu__list {   
+
+
+//! MENU - SUBMENU
+
+.submenus-container {   
     display: grid;
-    @media (min-width: 920px) {
+    @media (min-width: 950px) {
         grid-template-columns: repeat(3, 1fr);        
     }  
 }
 
-
 .submenu {
 overflow: hidden;  
-padding: 0 3rem; //SOLUTION POUR CONTRER EFFET DEGUEU SUR BOX SHADOW
+padding: 0 2rem; 
 margin-bottom: 2rem;
 
-
+@media (min-width: 950px) {
+    padding: 0 3rem;     
+}  
 }
 
 
+//! MENU - SUBMENU - ANIMATIONS
 .submenu1--anim {           
-    //! ANIMATION
     animation: fadein-btt 1.5s;
     animation-delay: 250ms;
     animation-fill-mode: both; 
 }
 
 .submenu2--anim {          
-    //! ANIMATION
     animation: fadein-btt 1.5s;
     animation-delay: 500ms;
     animation-fill-mode: both; 
 }
 
 .submenu3--anim {    
-    //! ANIMATION
     animation: fadein-btt 1.5s;
     animation-delay: 750ms;
     animation-fill-mode: both; 
 }
   
 
+
+//! MENU - SUBMENU - TITLE
 .submenu__title {
     position: relative;
     text-transform: uppercase;
@@ -148,6 +168,7 @@ margin-bottom: 2rem;
 }
 
 
+//! MENU - SUBMENU - ITEM
 .submenu-item {  
     @include box-shadow;
     overflow: hidden;
@@ -163,51 +184,38 @@ margin-bottom: 2rem;
         transition: all .5s ease-in-out;
     }
 
-    //! check-heart 
-    &:hover .submenu-item__check-heart {
+    //! ITEM CHECK ANIMATION
+    &:hover .submenu-item__check {
         margin-right: 0;
     }
 
     &:hover .submenu-item__iconwrapper {               
-        transform: rotate(0deg);                 
-
+        transform: rotate(0deg);              
     }
 }
-
-.submenu-item--check-heart { 
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    cursor: pointer;
-}
-
             
 .submenu-item__detail { 
-    flex: 1;
-    overflow: hidden;   
-    padding: 1.5rem;    
+    overflow: hidden; 
+    flex: 1; 
+    padding: 1.5rem;   
+    line-height: 2.25rem;  
 
     h4, p 
     {            
-       @include ellipsis;
-       width: 90%;
-       line-height: 2.25rem;                 
+       @include ellipsis;            
     }
 }    
                                             
-
 .submenu-item__price { 
     display: flex;
     align-items: flex-end;
     font-weight: 900;
     padding: 1.5rem;  
-
 }
 
 
-
-.submenu-item__check-heart { 
+//! MENU - SUBMENU - ITEM CHECK ELEMENTS FOR ANIMATION
+.submenu-item__check { 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -238,27 +246,17 @@ margin-bottom: 2rem;
 
 
 
-
-
-
-
-
-
-
-
-
-
-.menu__footer {
+//! MENU - BUTTON ORDER
+.menu__order {
     display: flex;
     justify-content: center;
     padding: 2rem;
 }
 
-.menu__button { 
+.menu-order__button { 
     @include button-primary;
     padding: 1.75rem 6rem;
     margin: 1.5rem;
-
 }
 
 
