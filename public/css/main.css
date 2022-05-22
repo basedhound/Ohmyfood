@@ -470,11 +470,6 @@ ul {
   padding-right: 7rem;
   cursor: default;
 }
-@media (min-width: 950px) {
-  .menu__title {
-    padding: 2rem 3rem;
-  }
-}
 
 .menu-title__heart::before {
   position: absolute;
@@ -494,11 +489,6 @@ ul {
   font-size: 3rem;
   right: 2rem;
   bottom: 1.75rem;
-}
-@media (min-width: 950px) {
-  .menu-title__heart::before {
-    right: 3rem;
-  }
 }
 .menu-title__heart::after {
   position: absolute;
@@ -523,11 +513,6 @@ ul {
   right: 1.9rem;
   bottom: 1.7rem;
 }
-@media (min-width: 950px) {
-  .menu-title__heart::after {
-    right: 2.9rem;
-  }
-}
 .menu-title__heart:hover::before {
   opacity: 0;
 }
@@ -548,11 +533,6 @@ ul {
   overflow: hidden;
   padding: 0 2rem;
   margin-bottom: 2rem;
-}
-@media (min-width: 950px) {
-  .submenu {
-    padding: 0 3rem;
-  }
 }
 
 .submenu1--anim {

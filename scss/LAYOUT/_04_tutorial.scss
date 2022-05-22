@@ -34,10 +34,10 @@
         font-weight: 600; 
         font-size: 1.8rem ;    
         cursor:default;        
-        // ANIMATION
+        //! ANIMATION
         animation: fadein-ltr 500ms;
         animation-fill-mode: both; 
-        // LOOP
+        //! LOOP
         @for $i from 1 through 3 { 
             &:nth-child(#{$i}) {
                 animation-delay: 750ms * $i;

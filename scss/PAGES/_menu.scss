@@ -59,10 +59,7 @@
     font-size: 2.5rem;
     padding-right: 7rem; 
     cursor: default; 
-    
-        @media (min-width: 950px) {
-            padding: 2rem 3rem;    
-        }             
+
 }          
 
 
@@ -72,10 +69,7 @@
         //! SIZE & POSITION
         font-size: 3rem;              
         right : 2rem;
-        bottom: 1.75rem;         
-            @media (min-width: 950px) {
-                right : 3rem;
-            } 
+        bottom: 1.75rem;       
     }
         
     &::after {
@@ -89,9 +83,6 @@
         font-size: 3.2rem;      
         right : 1.90rem;
         bottom: 1.70rem;
-            @media (min-width: 950px) {
-                right : 2.90rem;
-            } 
     }
 
     &:hover::before {                     
@@ -118,10 +109,6 @@
 overflow: hidden;  
 padding: 0 2rem; 
 margin-bottom: 2rem;
-
-    @media (min-width: 950px) {
-        padding: 0 3rem;     
-    }  
 }
 
 
