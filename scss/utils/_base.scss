@@ -7,14 +7,14 @@
 
 
 //!  STARTER PACK
-// Détecter erreurs de conteneurs / Detect container errors
+//? Détecter erreurs de conteneurs ~ Detect container errors
 // *,
 // ::before,
 // ::after {
-//     border: 1px solid;
+//     border: 1px solid black;
 // }
 
-// Bordure à l'intérieur des éléments / Borders inside container
+//? Bordure à l'intérieur des éléments ~ Borders inside container
 *,
 ::before,
 ::after {
@@ -23,49 +23,15 @@
     padding: 0;
 }
 
-// Img ne sortent pas de leur conteneur / Prevent img from overflowing container
+//? Img ne sortent pas de leur conteneur ~ Prevent img from overflowing container
 img { 
     max-width: 100%;
     height: auto;
 }
 
 
-//! FONTS
-// Font size 62.5% trick for rem
-html {
-    font-size: 62.5%;   
- }
-    
-body {   
-    font-size: 1.6rem;
-    font-family: "Roboto", sans-serif;
- }
-
-
-p { 
-    font-size: 1.6rem;
-} 
-
-
-h2 {
-    font-size: 2.5rem;
-}
-
-
-h4 {
-    font-size: 1.8rem;
-}
-
-a {
-    color: black;
-    text-decoration: none ;
-    
-}
-
-
-
-//! WIDTH , MARGIN , PADDING
-
+//! WIDTH
+//? Smallest device Galaxy Fold width 280px
 body { 
     min-width: 280px;
 }
@@ -77,7 +43,42 @@ body {
 }
 
 
-h1, h2, h3, h4, h5, h6, p, form { 
+//! FONTS
+//? Font size 62.5% trick to make 1rem = 10px
+html {
+    font-size: 62.5%;   
+ }
+
+//? Fonts
+body {     
+    font-family: "Roboto", sans-serif;
+ }
+
+a {
+    color: black;
+    text-decoration: none ;    
+}
+
+p { 
+    font-size: 1.6rem;
+} 
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+}
+
+
+//! MARGINs & PADDINGs
+
+h1, h2, h3, h4, h5, h6, p, a, form { 
     padding: 0;
     margin: 0;
 } 

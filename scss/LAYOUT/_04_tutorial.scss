@@ -1,0 +1,83 @@
+//! 03 : TUTORIAL
+
+.tutorial-section {
+    counter-reset: tuto;
+    padding: 1rem 2rem;
+    margin: auto;
+
+        & h2 { 
+                padding: 2rem 0;
+        }
+                        
+        & ol {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                padding-left: 0;
+                gap: 4rem;
+                @media (min-width: 950px) {
+                    flex-direction: row;
+                }        
+        }
+}
+
+
+.tutorial-section li {
+        @include box-shadow;
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: $color-4;
+        padding: 1.5rem 1.5rem;
+        flex-grow: 1;
+        border-radius: 1.5rem;
+        font-weight: 600; 
+        font-size: 1.8rem ;    
+        cursor:default;        
+        // ANIMATION
+        animation: fadein-ltr 500ms;
+        animation-fill-mode: both; 
+        // LOOP
+        @for $i from 1 through 3 { 
+            &:nth-child(#{$i}) {
+                animation-delay: 750ms * $i;
+            }
+        }  
+       
+        & i {
+            margin-right: 1rem;
+            color: grey;
+            font-size: 2rem;
+            padding: 1rem;
+        } 
+     
+        &::before {
+            counter-increment: tuto;
+            content: counter(tuto);
+            background-color: $color-1;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 500;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            left: -1.25rem; 
+        }
+
+        &:hover {
+            @include hover-shadow;
+            background-color: #f5edff;
+            transition: all .5s ease-in-out;          
+                i {
+                color: $color-1;
+                }
+        }
+    }
+
+
+
+

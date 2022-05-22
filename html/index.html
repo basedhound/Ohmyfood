@@ -15,12 +15,7 @@
   </head>
   <body>
 
-
-
   <div class="loader loader__bars"><span></span></div>
-
-
-
 
 
     <!--! HEADER -->
@@ -31,14 +26,14 @@
     <main>
 
       <!--! LOCATION -->  
-      <section class="location">
-        <i class="fa-solid fa-location-dot fa-lg"></i>
+      <section class="location-section">
+        <i class="fa-solid fa-location-dot"></i>
         <h2>Paris, Belleville</h2>
       </section>
 
 
       <!--! EXPLORE -->    
-      <section class="explorer">
+      <section class="explorer-section">
         <h2>Réservez le menu qui <br> vous convient</h2>
 
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
@@ -52,88 +47,78 @@
           
       
       <!--! TUTORIAL -->
-
-      <section class="tutorial">
+      <section class="tutorial-section">
         
         <div class="container">
 
-        <h2>Fonctionnement</h2>
-        <ol>
-          <li><i class="fa-tuto fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</li>
-          <li><i class="fa-tuto fa-solid fa-list-ul"></i>Composez votre menu</li>
-          <li><i class="fa-tuto  fa-solid fa-store"></i>Dégustez au restaurant</li>
-        </ol>
+          <h2>Fonctionnement</h2>
+          <ol>
+            <li><i class="fa-tuto fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</li>
+            <li><i class="fa-tuto fa-solid fa-list-ul"></i>Composez votre menu</li>
+            <li><i class="fa-tuto fa-solid fa-store"></i>Dégustez au restaurant</li>
+          </ol>
 
-      </div>
+        </div>
 
-      </section>
+    </section>
 
 
 
       
       <!--! RESTAURANTS  -->
-
-      <!-- section.restaurants>article.card*4{Restaurant$} -->
-
-      <section class="restaurants" id="restaurants">
+      <section class="restaurant-section" id="restaurants">
 
       <div class="container">
 
         <h2>Restaurants</h2>
 
-
-
-        <ul class="restaurants__list">          
-          <li class="restaurants__card restaurants__card--new" >
-            <a href="/html/resto-1.html" title="Restaurant 1">
-              <img src="../public/img/restaurant-1.jpg" alt="La palette du goût (image)">            
-              <footer class="card__footer">
+        <ul class="restaurant__grid">          
+          <li class="restaurant__card restaurant__card--new" >
+            <a href="/html/menu_la-palette-du-gout.html" title="La palette du goût, Ménilmontant">
+              <img src="../public/img/restaurant-1.jpg" alt="Restaurant 'La palette du goût' (illustration)">            
+              <footer class="restaurant-card__footer">
                 <h3>La palette du goût</h3>
                 <p>Ménilmontant</p>                              
               </footer>                                    
             </a>
             <input class="check-heart" type="checkbox" id="heart1">
-            <label for="heart1" class="restaurant-card__heart"></label>             
+            <label for="heart1" class="restaurant-card__heart" title="Ajouter aux Favoris"></label>           
           </li>
 
-
-
-
-
-          <li class="restaurants__card restaurants__card--new" >
-            <a href="/html/resto-2.html" title="Restaurant 1">
-              <img src="../public/img/restaurant-2.jpg" alt="La note enchantée (image)">            
-              <footer class="card__footer">
+          <li class="restaurant__card restaurant__card--new" >
+            <a href="/html/menu_la-note-enchantée.html" title="La note enchantée, Charonne">
+              <img src="../public/img/restaurant-2.jpg" alt="Restaurant 'La note enchantée' (illustration)">            
+              <footer class="restaurant-card__footer">
                 <h3>La note enchantée</h3>
                 <p>Charonne</p>
               </footer>                      
             </a>
             <input class="check-heart" type="checkbox" id="heart2">
-            <label for="heart2" class="restaurant-card__heart"></label>   
+            <label for="heart2" class="restaurant-card__heart" title="Ajouter aux Favoris"></label>   
           </li>
 
-          <li class="restaurants__card">
-            <a href="/html/resto-3.html" title="Restaurant 1">
-              <img src="../public/img/restaurant-3.jpg" alt=">À la française (image)">            
-              <footer class="card__footer">
+          <li class="restaurant__card">
+            <a href="/html/menu_a-la-francaise.html" title="À la française, Cité Rouge">
+              <img src="../public/img/restaurant-3.jpg" alt="Restaurant 'À la française' (illustration)">            
+              <footer class="restaurant-card__footer">
                 <h3>À la française</h3>
                 <p>Cité Rouge</p>
               </footer>                      
             </a>
             <input class="check-heart" type="checkbox" id="heart3">
-            <label for="heart3" class="restaurant-card__heart"></label>   
+            <label for="heart3" class="restaurant-card__heart" title="Ajouter aux Favoris"></label>   
           </li>
 
-          <li class="restaurants__card">
-            <a href="/html/resto-4.html" title="Restaurant 1">
-              <img src="../public/img/restaurant-4.jpg" alt="Le délice des sens (image)">            
-              <footer class="card__footer">
+          <li class="restaurant__card">
+            <a href="/html/menu_le-delice-des-sens.html" title="Le délice des sens, Folie-Méricourt">
+              <img src="../public/img/restaurant-4.jpg" alt="Restaurant 'Le délice des sens' (illustration)">            
+              <footer class="restaurant-card__footer">
                 <h3>Le délice des sens</h3>
                 <p>Folie-Méricourt</p> 
               </footer>                      
             </a>
             <input class="check-heart" type="checkbox" id="heart4">
-            <label for="heart4" class="restaurant-card__heart"></label>   
+            <label for="heart4" class="restaurant-card__heart" title="Ajouter aux Favoris"></label>   
           </li>
 
         </ul>
@@ -150,7 +135,7 @@
   <footer class="footer">
 
     <section class="container">
-      <h2><a href="#">ohmyfood</a></h2>
+      <h2><a href="#" title="Revenir à l'Accueil">ohmyfood</a></h2>
       <ul>
           <li><a href="#"><i class="fa-solid fa-utensils fa-lg"></i>Proposer un restaurant</a></li>
           <li><a href="#"><i class="fa-solid fa-handshake-angle fa-sm"></i>Devenir partenaire</a></li>

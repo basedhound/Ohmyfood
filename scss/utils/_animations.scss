@@ -1,16 +1,21 @@
 
 //! ANIMATIONS
 
-//* Appear
+//? ADD TO CSS ELEMENT
+// animation: animation-name 500ms;
+// animation-fill-mode: both; 
+
+//? LOOP
+// @for $i from 1 through 10 { 
+//     &:nth-child(#{$i}) {
+//         animation-delay: 250ms * $i;
+//     }
+// }  
+
 @keyframes upscale { 
     0% { transform: scale(0); }
     100% { transform: scale(1) }
 }
-
-// + ADD TO CSS ELEMENT
-// animation: upscale 500ms;
-// animation-fill-mode: both; 
-
 
 @keyframes fadein-ltr { 
     0% {
@@ -36,32 +41,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// + ADD TO CSS ELEMENT
-// animation: fadein 500ms;
-// animation-fill-mode: both; 
-
-// //! ANIMATION LOOP TEST
-// animation: upscale 500ms;
-// animation-fill-mode: both; 
-// //! LOOP FOR CHILDREN
-// @for $i from 1 through 10 { 
-//     &:nth-child(#{$i}) {
-//         animation-delay: 250ms * $i;
-//     }
-// }  

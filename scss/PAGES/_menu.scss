@@ -1,40 +1,40 @@
 //! MENU PAGE
 
-
 //! MENU - HEADER / ARROW RETURN
 .header {
-
     &:hover .header--arrow {
         color: $color-2;             
     }
+}    
 
-    &--arrow {      
-        &::before { 
-            //! Fontawesome
-            display: inline-block;
-            font-style: normal;
-            font-variant: normal;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            font-family: "Font Awesome 5 Free"; 
-            font-weight: 900; 
-            content: "\f060";
-            //! Settings
-            position: absolute;
-            left: 1.5rem;
-            top: 50%;  
-            transform: translateY(-50%);
-            font-size: 2rem;              
-            transition: all 200ms ease-in-out;
+.header--arrow {      
+    &::before { 
+        //! Fontawesome
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        content: "\f060";
+        //! Settings
+        position: absolute;
+        left: 1.5rem;
+        top: 50%;  
+        transform: translateY(-50%);
+        font-size: 2rem;              
+        transition: all 200ms ease-in-out;
 
             @media (min-width: 320px) {
                 font-size: 2.5rem;        
             }  
-        }
     }
 }
 
-//! MENU - HEADER + ARROW RETURN
+
+
+//! MENU - BANNER
 .menu-banner { 
     object-fit: cover;
     width: 100%;
@@ -53,17 +53,16 @@
 }
 
 .menu__title {   
-            position: relative;   
-            font-family: "Shrikhand", cursive;  
-            padding: 2rem 2rem;
-            font-size: 2.5rem;
-            padding-right: 7rem; 
-            cursor: default; 
-            
-            @media (min-width: 950px) {
-                padding: 2rem 3rem;    
-            } 
-            
+    position: relative;   
+    font-family: "Shrikhand", cursive;  
+    padding: 2rem 2rem;
+    font-size: 2.5rem;
+    padding-right: 7rem; 
+    cursor: default; 
+    
+        @media (min-width: 950px) {
+            padding: 2rem 3rem;    
+        }             
 }          
 
 
@@ -74,60 +73,59 @@
         font-size: 3rem;              
         right : 2rem;
         bottom: 1.75rem;         
-        @media (min-width: 950px) {
-            right : 3rem;
-        } 
+            @media (min-width: 950px) {
+                right : 3rem;
+            } 
     }
-            &:hover::before {                     
-                opacity: 0;                                                
-            }  
         
     &::after {
         @include heart; 
-        @include gradient;                     
+        @include gradient; 
+        font-weight: 900;                    
         color: transparent;
         opacity: 0;
-        font-weight: 900;
 
         //! SIZE & POSITION
         font-size: 3.2rem;      
         right : 1.90rem;
         bottom: 1.70rem;
-        @media (min-width: 950px) {
-            right : 2.90rem;
-        } 
+            @media (min-width: 950px) {
+                right : 2.90rem;
+            } 
     }
-            &:hover::after {  
-                opacity: 1;                          
-            }
+
+    &:hover::before {                     
+        opacity: 0;                                                
+    }  
+
+    &:hover::after {  
+        opacity: 1;                          
+    }
 }
-
-
-
 
 
 
 //! MENU - SUBMENU
 
-.submenus-container {   
+.submenus-grid {   
     display: grid;
-    @media (min-width: 950px) {
-        grid-template-columns: repeat(3, 1fr);        
-    }  
-}
+        @media (min-width: 950px) {
+            grid-template-columns: repeat(3, 1fr);        
+        }  
+    }
 
 .submenu {
 overflow: hidden;  
 padding: 0 2rem; 
 margin-bottom: 2rem;
 
-@media (min-width: 950px) {
-    padding: 0 3rem;     
-}  
+    @media (min-width: 950px) {
+        padding: 0 3rem;     
+    }  
 }
 
 
-//! MENU - SUBMENU - ANIMATIONS
+//! MENU - SUBMENU - ANIMATION DELAY
 .submenu1--anim {           
     animation: fadein-btt 1.5s;
     animation-delay: 250ms;
@@ -145,7 +143,6 @@ margin-bottom: 2rem;
     animation-delay: 750ms;
     animation-fill-mode: both; 
 }
-  
 
 
 //! MENU - SUBMENU - TITLE
@@ -182,27 +179,26 @@ margin-bottom: 2rem;
         @include hover-shadow;
         @include zoom;
         transition: all .5s ease-in-out;
-    }
 
-    //! ITEM CHECK ANIMATION
-    &:hover .submenu-item__check {
-        margin-right: 0;
-    }
+        // //! ITEM CHECK ANIMATION
+        .submenu-item__check {
+            margin-right: 0;
+        }
 
-    &:hover .submenu-item__iconwrapper {               
-        transform: rotate(0deg);              
+        .submenu-item__check-icon {               
+            transform: rotate(0deg);              
+        }       
     }
 }
-            
+           
 .submenu-item__detail { 
     overflow: hidden; 
     flex: 1; 
     padding: 1.5rem;   
     line-height: 2.25rem;  
 
-    h4, p 
-    {            
-       @include ellipsis;            
+    h4, p {            
+        @include ellipsis;            
     }
 }    
                                             
@@ -226,24 +222,23 @@ margin-bottom: 2rem;
     transition-duration: .5s;
 }
 
-.submenu-item__iconwrapper { 
+.submenu-item__check-icon { 
     display: flex;    
     justify-content: center;
     align-items: center;
+    // CRICLE AROUND ICON
     border: 1px solid transparent ;
     background-color: white;
     border-radius: 50%;
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    // FONTAWESOME ICON
+    color: $color-3;    
+    font-size: 1.75rem;
+    font-weight: bolder;
     transform: rotate(180deg);
     transition-duration: .5s;
-
-    i {
-        color: $color-3;
-        font-size: 2rem;
-    }
 }
-
 
 
 //! MENU - BUTTON ORDER

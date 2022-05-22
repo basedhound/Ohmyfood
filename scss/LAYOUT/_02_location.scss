@@ -1,7 +1,6 @@
+//!  MAIN LAYOUT - LOCATION, CITY
 
-//!  01 : LOCATION
-
-.location {
+.location-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,6 +8,7 @@
     background-color: $color-4;
     padding: 1rem;
     color: grey;
+    font-size: 1.5rem;
 
     h2 {
         font-size: 2rem;

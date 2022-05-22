@@ -1,6 +1,6 @@
-//!  02 : EXPLORE > BUTTON
+//!  MAIN LAYOUT - EXPLORER BUTTON
 
-.explorer {
+.explorer-section {
     text-align: center;
     background-color: $color-5;
     padding: 2rem;
@@ -15,12 +15,13 @@
         color: grey;
         padding: 1rem;
     }
-    
 
-    &__button {
-        @include button-primary;
-        margin: 3rem;
-    }
+    
 
 }
 
+
+.explorer__button {
+    @include button-primary;
+    margin: 3rem 0rem;
+}

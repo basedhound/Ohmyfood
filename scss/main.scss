@@ -1,20 +1,25 @@
 //!  MAIN SCSS : IMPORTS
 
 //* BASE
-@import "./base";
+@import "./UTILS/base";
 
 //* UTILS
-@import "./utils/mixins";
-@import "./utils/variables";
-@import "./utils/animations";
+@import "./UTILS/mixins";
+@import "./UTILS/variables";
+@import "./UTILS/animations";
 
 
 //* LAYOUT
-@import "./layout/00_header.scss";
-@import "./layout/01_location.scss";
-@import "./layout/02_explorer.scss";
-@import "./layout/03_tutorial.scss";
-@import "./layout/04_restaurants.scss";
-@import "./layout/05_menu.scss";
-@import "./layout/06_loader.scss";
-@import "./layout/99_footer.scss";
+@import "./layout/_00_loader.scss";
+
+@import "./LAYOUT/01_header.scss";
+@import "./LAYOUT/02_location.scss";
+@import "./LAYOUT/03_explorer.scss";
+@import "./LAYOUT/04_tutorial.scss";
+@import "./LAYOUT/05_restaurants.scss";
+@import "./LAYOUT/06_footer.scss";
+
+
+//* PAGES
+
+@import "./PAGES/menu";

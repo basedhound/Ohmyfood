@@ -32,19 +32,23 @@
     font-size: 1.7rem;
     font-weight: 500;
     color: $color-4;
-    cursor: pointer;       
-    &:hover {
-        color: white;
-        @include zoom;
-        @include hover-shadow;
-        background-image: linear-gradient(to left top, $color-2, $color-1);   
-        filter: brightness(110%);
-        transition: all 200ms ease-in-out;  
-    }
+    cursor: pointer;     
+      
+        &:hover {
+            color: white;
+            @include zoom;
+            @include hover-shadow;
+            background-image: linear-gradient(to left top, $color-2, $color-1);   
+            filter: brightness(110%);
+            transition: all 200ms ease-in-out;  
+        }
 } 
 
+
+
+//! HEART for FAVS
 @mixin heart {
-    //! Font Awesome use
+    //! FONTAWESOME USE
     position: absolute;
     display: inline-block;
     font-style: normal;
@@ -52,7 +56,7 @@
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     font-family: "Font Awesome 5 Free";  font-weight: 400; content: "\f004";
-    //! Plus
+    //! SETTINGS
     cursor: pointer;
     background-clip: text;
     -webkit-background-clip: text;
@@ -60,7 +64,7 @@
     transition: all 200ms ease-in-out;
 }
 
-//! Check/Uncheck Hearts
+//! HEART AS CHECKBOX
 // Remove default check-heart
 .check-heart[type="checkbox"] {
     display: none;
@@ -71,21 +75,6 @@
 }
 
 
-
-
-.check-menu[type="checkbox"] {
-    display: none;
-}
-
-.check-menu[type="checkbox"]:checked + label:hover {
-
-
-}
-
-
-
-
-//TODO =
 
 
 
