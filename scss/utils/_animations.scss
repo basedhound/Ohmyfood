@@ -1,22 +1,60 @@
 
 //! ANIMATIONS
 
-//? ADD TO CSS ELEMENT
-// animation: animation-name 500ms;
-// animation-fill-mode: both; 
-
-//? LOOP
-// @for $i from 1 through 10 { 
-//     &:nth-child(#{$i}) {
-//         animation-delay: 250ms * $i;
-//     }
-// }  
-
-@keyframes upscale { 
-    0% { transform: scale(0); }
-    100% { transform: scale(1) }
+//! INDEX PAGE LOADER
+@keyframes loader-fadeout { 
+    from { 
+        opacity: 1;         
+    }
+    to {  
+        opacity: 0 ; 
+        z-index: -1;
+    }
 }
 
+@keyframes grow-bars {
+    0% {transform: scaleY(0); opacity: 0;}
+    50% {transform: scaleY(1); opacity: 1;}
+    100% {transform: scaleY(0); opacity: 0;}
+}
+
+
+//! HEADER TITLE + SUBMENU TITLES
+@keyframes expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+//! EXPLORER BUTTON
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1.5px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(1.5px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-1.5px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(1.5px, 0, 0);
+    }
+  }
+
+
+//! TUTORIAL LI
 @keyframes fadein-ltr { 
     0% {
         transform: translateX(-50%);
@@ -28,6 +66,40 @@
     }
 }  
 
+//? ADD TO CSS ELEMENT
+// animation: animation-name 500ms;
+// animation-fill-mode: both; 
+
+//? LOOP
+// @for $i from 1 through 10 { 
+//     &:nth-child(#{$i}) {
+//         animation-delay: 250ms * $i;
+//     }
+// }  
+
+
+
+//! RESTAURANT CARDS
+@keyframes upscale { 
+    0% { transform: scale(0); }
+    100% { transform: scale(1) }
+}
+
+
+//! MENU TITLE
+@keyframes focus {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+  }
+
+
+//! MENU ITEMS
 @keyframes fadein-btt { 
     0% {
         transform: translateY(10%);
@@ -38,6 +110,7 @@
         opacity: 1;
     }
 }  
+
 
 
 

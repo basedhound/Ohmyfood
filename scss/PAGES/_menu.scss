@@ -55,10 +55,12 @@
 .menu__title {   
     position: relative;   
     font-family: "Shrikhand", cursive;  
-    padding: 2rem 2rem;
+    padding: 2rem 3rem;
     font-size: 2.5rem;
     padding-right: 7rem; 
     cursor: default; 
+    //! ANIMATION
+    animation: focus 1s ease;
 
 }          
 
@@ -68,7 +70,7 @@
         @include heart;
         //! SIZE & POSITION
         font-size: 3rem;              
-        right : 2rem;
+        right : 2.5rem;
         bottom: 1.75rem;       
     }
         
@@ -81,7 +83,7 @@
 
         //! SIZE & POSITION
         font-size: 3.2rem;      
-        right : 1.90rem;
+        right : 2.4rem;
         bottom: 1.70rem;
     }
 
@@ -115,19 +117,19 @@ margin-bottom: 2rem;
 //! MENU - SUBMENU - ANIMATION DELAY
 .submenu1--anim {           
     animation: fadein-btt 1.5s;
-    animation-delay: 250ms;
+    animation-delay: 500ms;
     animation-fill-mode: both; 
 }
 
 .submenu2--anim {          
     animation: fadein-btt 1.5s;
-    animation-delay: 500ms;
+    animation-delay: 1s;
     animation-fill-mode: both; 
 }
 
 .submenu3--anim {    
     animation: fadein-btt 1.5s;
-    animation-delay: 750ms;
+    animation-delay: 1.5s;
     animation-fill-mode: both; 
 }
 
@@ -139,6 +141,8 @@ margin-bottom: 2rem;
     padding: 2rem 0 1rem 0;
     font-weight: 400;
     cursor: default;
+    //! ANIMATION
+    animation: expand 2s ease;
 
     &::after {
         content: "";
@@ -161,11 +165,11 @@ margin-bottom: 2rem;
     display: flex;  
     margin: 2rem 0;
     cursor: pointer; 
+    transition: all .2s ease-in-out;
     
     &:hover {
         @include hover-shadow;
         @include zoom;
-        transition: all .5s ease-in-out;
 
         // //! ITEM CHECK ANIMATION
         .submenu-item__check {

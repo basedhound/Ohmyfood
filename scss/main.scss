@@ -4,22 +4,22 @@
 @import "./UTILS/base";
 
 //* UTILS
-@import "./UTILS/mixins";
-@import "./UTILS/variables";
-@import "./UTILS/animations";
+@import "./UTILS/_mixins";
+@import "./UTILS/_variables";
+@import "./UTILS/_animations";
 
 
 //* LAYOUT
-@import "./layout/_00_loader.scss";
+@import "./LAYOUT/_00_loader.scss";
 
-@import "./LAYOUT/01_header.scss";
-@import "./LAYOUT/02_location.scss";
-@import "./LAYOUT/03_explorer.scss";
-@import "./LAYOUT/04_tutorial.scss";
-@import "./LAYOUT/05_restaurants.scss";
-@import "./LAYOUT/06_footer.scss";
+@import "./LAYOUT/_01_header.scss";
+@import "./LAYOUT/_02_location.scss";
+@import "./LAYOUT/_03_explorer.scss";
+@import "./LAYOUT/_04_tutorial.scss";
+@import "./LAYOUT/_05_restaurants.scss";
+@import "./LAYOUT/_06_footer.scss";
 
 
 //* PAGES
 
-@import "./PAGES/menu";
+@import "./PAGES/_menu";

@@ -13,10 +13,11 @@
                 display: flex;
                 flex-direction: column;
                 list-style: none;
-                padding-left: 0;
+                padding-left: 0rem;
                 gap: 4rem;
                 @media (min-width: 950px) {
                     flex-direction: row;
+                    padding-left: 1rem;
                 }        
         }
 }
@@ -32,8 +33,10 @@
         flex-grow: 1;
         border-radius: 1.5rem;
         font-weight: 600; 
-        font-size: 1.8rem ;    
-        cursor:default;        
+        font-size: 1.8rem;  
+        cursor:default; 
+        //! TRANSITION
+        transition: all 500ms ease-in-out; 
         //! ANIMATION
         animation: fadein-ltr 500ms;
         animation-fill-mode: both; 
@@ -70,8 +73,7 @@
 
         &:hover {
             @include hover-shadow;
-            background-color: #f5edff;
-            transition: all .5s ease-in-out;          
+            background-color: #f5edff;      
                 i {
                 color: $color-1;
                 }

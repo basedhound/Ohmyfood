@@ -6,20 +6,15 @@
     padding: 2rem;
 
     h2 {
-        padding: 1rem;
-        
+        padding: 1rem;        
     }
 
     p {
         font-size: 1.8rem;
         color: grey;
         padding: 1rem;
-    }
-
-    
-
+    }   
 }
-
 
 .explorer__button {
     @include button-primary;

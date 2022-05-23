@@ -71,12 +71,53 @@ ul {
   opacity: 1;
 }
 
-@keyframes upscale {
+@keyframes loader-fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes grow-bars {
   0% {
-    transform: scale(0);
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
   }
   100% {
-    transform: scale(1);
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+@keyframes expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1.5px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(1.5px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-1.5px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(1.5px, 0, 0);
   }
 }
 @keyframes fadein-ltr {
@@ -86,6 +127,24 @@ ul {
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes upscale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes focus {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
     opacity: 1;
   }
 }
@@ -99,6 +158,50 @@ ul {
     opacity: 1;
   }
 }
+.loader {
+  position: fixed;
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.7;
+  z-index: 10;
+  animation: loader-fadeout 200ms;
+  animation-delay: 2.75s;
+  animation-fill-mode: forwards;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loader__bars::before {
+  content: "";
+  display: flex;
+  width: 15px;
+  height: 50px;
+  background-color: #9356DC;
+  animation: grow-bars 1.5s linear -1s infinite;
+}
+
+.loader__bars span {
+  content: "";
+  display: flex;
+  width: 15px;
+  height: 50px;
+  background-color: #FF79DA;
+  animation: grow-bars 1.5s linear -0.5s infinite;
+}
+
+.loader__bars::after {
+  content: "";
+  display: flex;
+  width: 15px;
+  height: 50px;
+  background-color: #99E2D0;
+  animation: grow-bars 1.5s linear infinite;
+}
+
 .header {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   font-family: "Shrikhand", cursive;
@@ -107,6 +210,7 @@ ul {
   padding: 0.2rem;
   position: relative;
   cursor: pointer;
+  animation: expand 3s ease;
 }
 .header h1 {
   padding: 2rem;
@@ -160,16 +264,16 @@ ul {
   font-weight: 500;
   color: #F3F3F3;
   cursor: pointer;
+  transition: all 200ms ease-in-out;
+  animation: shake 2s infinite;
   margin: 3rem 0rem;
 }
 .explorer__button:hover {
   color: white;
   transform: scale(1.025);
-  transition: transform 0s;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-  background-image: linear-gradient(to left top, #FF79DA, #9356DC);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 15px;
   filter: brightness(110%);
-  transition: all 200ms ease-in-out;
+  animation: paused;
 }
 
 .tutorial-section {
@@ -184,12 +288,13 @@ ul {
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding-left: 0;
+  padding-left: 0rem;
   gap: 4rem;
 }
 @media (min-width: 950px) {
   .tutorial-section ol {
     flex-direction: row;
+    padding-left: 1rem;
   }
 }
 
@@ -205,6 +310,7 @@ ul {
   font-weight: 600;
   font-size: 1.8rem;
   cursor: default;
+  transition: all 500ms ease-in-out;
   animation: fadein-ltr 500ms;
   animation-fill-mode: both;
 }
@@ -240,9 +346,8 @@ ul {
   left: -1.25rem;
 }
 .tutorial-section li:hover {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 15px;
   background-color: #f5edff;
-  transition: all 0.5s ease-in-out;
 }
 .tutorial-section li:hover i {
   color: #9356DC;
@@ -273,7 +378,6 @@ ul {
 }
 
 .restaurant__card {
-  animation: upscale 3s;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   position: relative;
   border: 1px solid black;
@@ -284,6 +388,8 @@ ul {
   border-radius: 2rem;
   text-decoration: none;
   color: black;
+  transition: all 0.2s ease-in-out;
+  animation: upscale 3s ease;
 }
 .restaurant__card img {
   object-fit: cover;
@@ -293,9 +399,7 @@ ul {
 }
 .restaurant__card:hover {
   transform: scale(1.025);
-  transition: transform 0s;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-  transition: all 200ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 15px;
 }
 
 .restaurant-card__footer {
@@ -332,7 +436,7 @@ ul {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in-out;
   font-size: 3rem;
   padding: 1rem;
   right: 2rem;
@@ -352,7 +456,7 @@ ul {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in-out;
   background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
   font-weight: 900;
   color: transparent;
@@ -465,10 +569,11 @@ ul {
 .menu__title {
   position: relative;
   font-family: "Shrikhand", cursive;
-  padding: 2rem 2rem;
+  padding: 2rem 3rem;
   font-size: 2.5rem;
   padding-right: 7rem;
   cursor: default;
+  animation: focus 1s ease;
 }
 
 .menu-title__heart::before {
@@ -485,9 +590,9 @@ ul {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in-out;
   font-size: 3rem;
-  right: 2rem;
+  right: 2.5rem;
   bottom: 1.75rem;
 }
 .menu-title__heart::after {
@@ -504,13 +609,13 @@ ul {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in-out;
   background-image: linear-gradient(to right bottom, #FF79DA, #9356DC);
   font-weight: 900;
   color: transparent;
   opacity: 0;
   font-size: 3.2rem;
-  right: 1.9rem;
+  right: 2.4rem;
   bottom: 1.7rem;
 }
 .menu-title__heart:hover::before {
@@ -537,19 +642,19 @@ ul {
 
 .submenu1--anim {
   animation: fadein-btt 1.5s;
-  animation-delay: 250ms;
+  animation-delay: 500ms;
   animation-fill-mode: both;
 }
 
 .submenu2--anim {
   animation: fadein-btt 1.5s;
-  animation-delay: 500ms;
+  animation-delay: 1s;
   animation-fill-mode: both;
 }
 
 .submenu3--anim {
   animation: fadein-btt 1.5s;
-  animation-delay: 750ms;
+  animation-delay: 1.5s;
   animation-fill-mode: both;
 }
 
@@ -559,6 +664,7 @@ ul {
   padding: 2rem 0 1rem 0;
   font-weight: 400;
   cursor: default;
+  animation: expand 2s ease;
 }
 .submenu__title::after {
   content: "";
@@ -578,12 +684,11 @@ ul {
   display: flex;
   margin: 2rem 0;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 .submenu-item:hover {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 15px;
   transform: scale(1.025);
-  transition: transform 0s;
-  transition: all 0.5s ease-in-out;
 }
 .submenu-item:hover .submenu-item__check {
   margin-right: 0;
@@ -654,17 +759,17 @@ ul {
   font-weight: 500;
   color: #F3F3F3;
   cursor: pointer;
+  transition: all 200ms ease-in-out;
+  animation: shake 2s infinite;
   padding: 1.75rem 6rem;
   margin: 1.5rem;
 }
 .menu-order__button:hover {
   color: white;
   transform: scale(1.025);
-  transition: transform 0s;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-  background-image: linear-gradient(to left top, #FF79DA, #9356DC);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 15px;
   filter: brightness(110%);
-  transition: all 200ms ease-in-out;
+  animation: paused;
 }
 
 /*# sourceMappingURL=main.css.map */
