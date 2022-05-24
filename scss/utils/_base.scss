@@ -1,10 +1,9 @@
 //!  IMPORT
 // Font - Shirkand
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
 // Font - Roboto
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
 
 //!  STARTER PACK
 //? Détecter erreurs de conteneurs ~ Detect container errors
@@ -18,73 +17,77 @@
 *,
 ::before,
 ::after {
-    box-sizing:border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 //? Img ne sortent pas de leur conteneur ~ Prevent img from overflowing container
-img { 
-    max-width: 100%;
-    height: auto;
+img {
+  max-width: 100%;
 }
-
 
 //! WIDTH
 //? Smallest device Galaxy Fold width 280px
-body { 
-    min-width: 280px;
+body {
+  min-width: 280px;
 }
 
 .container {
-    max-width: 1280px;
-    margin: auto;
-    position: relative;
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
 }
-
 
 //! FONTS
 //? Font size 62.5% trick to make 1rem = 10px
 html {
-    font-size: 62.5%;   
- }
-
-//? Fonts
-body {     
-    font-family: "Roboto", sans-serif;
- }
-
-a {
-    color: black;
-    text-decoration: none ;    
+  font-size: 62.5%;
 }
 
-p { 
-    font-size: 1.6rem;
-} 
+//? Fonts
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
 
 h2 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 h3 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h4 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
-
 
 //! MARGINs & PADDINGs
 
-h1, h2, h3, h4, h5, h6, p, a, form { 
-    padding: 0;
-    margin: 0;
-} 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+form {
+  padding: 0;
+  margin: 0;
+}
 
-ul { 
-    margin: 0;
-    padding: 0;
-    list-style: none;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

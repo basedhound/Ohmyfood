@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch scss/main.scss:public/css/main.css",
-    "prefix": "postcss ./public/css/main.css"
+    "prefix": "postcss --watch ./public/css/main.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jozefstallone/ohmyfood.git"
   },
+  "browserslist": "last 4 versions",
   "author": "",
   "license": "ISC",
   "bugs": {

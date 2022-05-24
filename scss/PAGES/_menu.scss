@@ -2,248 +2,234 @@
 
 //! MENU - HEADER / ARROW RETURN
 .header {
-    &:hover .header--arrow {
-        color: $color-2;             
-    }
-}    
-
-.header--arrow {      
-    &::before { 
-        //! Fontawesome
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-family: "Font Awesome 5 Free"; 
-        font-weight: 900; 
-        content: "\f060";
-        //! Settings
-        position: absolute;
-        left: 1.5rem;
-        top: 50%;  
-        transform: translateY(-50%);
-        font-size: 2rem;              
-        transition: all 200ms ease-in-out;
-
-            @media (min-width: 320px) {
-                font-size: 2.5rem;        
-            }  
-    }
+  &:hover .header--arrow {
+    color: $color-2;
+  }
 }
 
+.header--arrow {
+  &::before {
+    //* FONTAWESOME
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f060";
+    //* SETTINGS
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    transition: all 200ms ease-in-out;
 
+    @media (min-width: 320px) {
+      font-size: 2.5rem;
+    }
+  }
+}
 
 //! MENU - BANNER
-.menu-banner { 
-    object-fit: cover;
-    width: 100%;
-    display: block;
-    max-height: 50rem; 
+.menu-banner {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  max-height: 50rem;
 }
 
-.menu { 
-    max-width: 1280px;
-    margin: auto;
-    position: relative;
-    margin-top: -5rem;
-    padding: 2rem 0;
-    border-radius: 3rem 3rem 0 0;
-    background-color: $color-4;
+.menu {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+  margin-top: -5rem;
+  padding: 2rem 0;
+  border-radius: 3rem 3rem 0 0;
+  background-color: $color-4;
 }
 
-.menu__title {   
-    position: relative;   
-    font-family: "Shrikhand", cursive;  
-    padding: 2rem 3rem;
-    font-size: 2.5rem;
-    padding-right: 7rem; 
-    cursor: default; 
-    //! ANIMATION
-    animation: focus 1s ease;
-
-}          
-
-
-.menu-title__heart { 
-    &::before {
-        @include heart;
-        //! SIZE & POSITION
-        font-size: 3rem;              
-        right : 2.5rem;
-        bottom: 1.75rem;       
-    }
-        
-    &::after {
-        @include heart; 
-        @include gradient; 
-        font-weight: 900;                    
-        color: transparent;
-        opacity: 0;
-
-        //! SIZE & POSITION
-        font-size: 3.2rem;      
-        right : 2.4rem;
-        bottom: 1.70rem;
-    }
-
-    &:hover::before {                     
-        opacity: 0;                                                
-    }  
-
-    &:hover::after {  
-        opacity: 1;                          
-    }
+.menu__title {
+  position: relative;
+  font-family: "Shrikhand", cursive;
+  padding: 2rem 3rem;
+  font-size: 2.5rem;
+  padding-right: 7rem;
+  cursor: default;
+  //* ANIMATION
+  animation: focus 2s ease;
 }
 
+.menu-title__heart {
+  &::before {
+    @include heart;
+    //* SIZE & POSITION
+    font-size: 3rem;
+    right: 2.5rem;
+    bottom: 1rem;
+  }
 
+  &::after {
+    @include heart;
+    @include gradient;
+    font-weight: 900;
+    color: transparent;
+    opacity: 0;
+    //* SIZE & POSITION
+    font-size: 3.2rem;
+    right: 2.4rem;
+    bottom: 0.95rem;
+  }
+
+  &:hover::before {
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
 
 //! MENU - SUBMENU
-
-.submenus-grid {   
-    display: grid;
-        @media (min-width: 950px) {
-            grid-template-columns: repeat(3, 1fr);        
-        }  
-    }
+.submenus-grid {
+  display: grid;
+  @media (min-width: 950px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 .submenu {
-overflow: hidden;  
-padding: 0 2rem; 
-margin-bottom: 2rem;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
 }
-
 
 //! MENU - SUBMENU - ANIMATION DELAY
-.submenu1--anim {           
-    animation: fadein-btt 1.5s;
-    animation-delay: 500ms;
-    animation-fill-mode: both; 
+.submenu1--anim {
+  animation: fadein-btt 1.5s;
+  animation-delay: 500ms;
+  animation-fill-mode: both;
 }
 
-.submenu2--anim {          
-    animation: fadein-btt 1.5s;
-    animation-delay: 1s;
-    animation-fill-mode: both; 
+.submenu2--anim {
+  animation: fadein-btt 1.5s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
 }
 
-.submenu3--anim {    
-    animation: fadein-btt 1.5s;
-    animation-delay: 1.5s;
-    animation-fill-mode: both; 
+.submenu3--anim {
+  animation: fadein-btt 1.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
 }
-
 
 //! MENU - SUBMENU - TITLE
 .submenu__title {
-    position: relative;
-    text-transform: uppercase;
-    padding: 2rem 0 1rem 0;
-    font-weight: 400;
-    cursor: default;
-    //! ANIMATION
-    animation: expand 2s ease;
+  position: relative;
+  text-transform: uppercase;
+  padding: 2rem 0 1rem 0;
+  font-weight: 400;
+  cursor: default;
+  //* ANIMATION
+  animation: expand 3s ease;
 
-    &::after {
-        content: "";
-        width: 5rem;
-        height: 0.4rem;
-        background-color: $color-3;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
+  &::after {
+    content: "";
+    width: 5rem;
+    height: 0.4rem;
+    background-color: $color-3;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }
-
 
 //! MENU - SUBMENU - ITEM
-.submenu-item {  
-    @include box-shadow;
-    overflow: hidden;
-    background-color: white;
-    border-radius: 1.5rem;  
-    display: flex;  
-    margin: 2rem 0;
-    cursor: pointer; 
-    transition: all .2s ease-in-out;
-    
-    &:hover {
-        @include hover-shadow;
-        @include zoom;
+.submenu-item {
+  @include box-shadow;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 1.5rem;
+  display: flex;
+  margin: 2rem 0;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
 
-        // //! ITEM CHECK ANIMATION
-        .submenu-item__check {
-            margin-right: 0;
-        }
+  &:hover {
+    @include hover-shadow;
+    @include zoom;
 
-        .submenu-item__check-icon {               
-            transform: rotate(0deg);              
-        }       
+    //* ITEM CHECK ANIMATION
+    .submenu-item__check {
+      margin-right: 0;
     }
-}
-           
-.submenu-item__detail { 
-    overflow: hidden; 
-    flex: 1; 
-    padding: 1.5rem;   
-    line-height: 2.25rem;  
 
-    h4, p {            
-        @include ellipsis;            
+    //* ITEM CHECK ICON ANIMATION
+    .submenu-item__check-icon {
+      transform: rotate(0deg);
     }
-}    
-                                            
-.submenu-item__price { 
-    display: flex;
-    align-items: flex-end;
-    font-weight: 900;
-    padding: 1.5rem;  
+  }
 }
 
+.submenu-item__detail {
+  overflow: hidden;
+  flex: 1;
+  padding: 1.5rem;
+  line-height: 2.25rem;
+
+  h4,
+  p {
+    @include ellipsis;
+  }
+}
+
+.submenu-item__price {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 900;
+  padding: 1.5rem;
+}
 
 //! MENU - SUBMENU - ITEM CHECK ELEMENTS FOR ANIMATION
-.submenu-item__check { 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $color-3;
-    border-radius: 0 1.5rem 1.5rem 0;
-    width: 7rem;
-    margin-right: -7rem;    
-    transition-duration: .5s;
+.submenu-item__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-3;
+  border-radius: 0 1.5rem 1.5rem 0;
+  width: 7rem;
+  margin-right: -7rem;
+  transition: all 200ms ease-in-out;
 }
 
-.submenu-item__check-icon { 
-    display: flex;    
-    justify-content: center;
-    align-items: center;
-    // CRICLE AROUND ICON
-    border: 1px solid transparent ;
-    background-color: white;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    // FONTAWESOME ICON
-    color: $color-3;    
-    font-size: 1.75rem;
-    font-weight: bolder;
-    transform: rotate(180deg);
-    transition-duration: .5s;
+.submenu-item__check-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //* CRICLE AROUND ICON
+  border: 1px solid transparent;
+  background-color: white;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  //* FONTAWESOME ICON
+  color: $color-3;
+  font-size: 1.75rem;
+  font-weight: bolder;
+  transform: rotate(180deg);
+  transition: all 300ms ease-in-out;
 }
-
 
 //! MENU - BUTTON ORDER
 .menu__order {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.menu-order__button { 
-    @include button-primary;
-    padding: 1.75rem 6rem;
-    margin: 1.5rem;
+.menu-order__button {
+  @include button-primary;
+  padding: 1.75rem 6rem;
+  margin: 1.5rem;
 }
-
-
-

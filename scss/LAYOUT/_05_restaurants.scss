@@ -1,124 +1,117 @@
 //! 04 : RESTAURANTS
 
-.restaurant-section { 
-    background-color: $color-4;
-    margin-top: 5rem;
-    padding: 2rem 2rem 2rem 2rem;
-   
-    h2 {
-        margin: auto;
-        padding: 2rem 2rem 2rem 0rem;
-    }
+.restaurant-section {
+  background-color: $color-4;
+  margin-top: 5rem;
+  padding: 2rem 2rem 2rem 2rem;
+
+  h2 {
+    margin: auto;
+    padding: 2rem 2rem 2rem 0rem;
+  }
 }
 
-.restaurant__grid { 
-    list-style: none;
-    padding-left: 0;
-    gap: 4rem;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 5rem ;
-    @media (min-width: 950px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.restaurant__grid {
+  list-style: none;
+  padding-left: 0;
+  gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 5rem;
+  @media (min-width: 950px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .restaurant__card {
-    @include box-shadow;
-    position: relative;
-    border: 1px solid black;
-    height: 25rem; 
-    display: block;
-    background-color: white;
-    border: none;
-    border-radius: 2rem;
-    text-decoration: none;
-    color: black; 
-    transition: all .2s ease-in-out;
-    //! ANIMATION
-    animation: upscale 3s ease;  
+  @include box-shadow;
+  position: relative;
+  border: 1px solid black;
+  height: 25rem;
+  display: block;
+  background-color: white;
+  border: none;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: black;
+  transition: all 0.2s ease-in-out;
+  //* ANIMATION
+  animation: upscale 3s ease;
 
-        & img {
-            object-fit: cover;
-            height: 70%;
-            width: 100%;
-            border-radius: 2rem 2rem 0rem 0rem;                                                  
-        }
+  & img {
+    object-fit: cover;
+    height: 70%;
+    width: 100%;
+    border-radius: 2rem 2rem 0rem 0rem;
+  }
 
-        &:hover {
-            @include zoom;
-            @include hover-shadow;
-        }
-}         
-
-
-.restaurant-card__footer { 
-    position: relative; 
-    padding: 1rem 2rem;
-    line-height: 2.25rem;                 
-
-        & h3 {                             
-            font-size: 2rem;
-            width: 75%;
-            @include ellipsis;
-        }
-
-        & p {
-            font-size: 1.7rem;
-            width: 75%;
-            @include ellipsis;
-        }                           
-
+  &:hover {
+    @include zoom;
+    @include hover-shadow;
+  }
 }
 
+.restaurant-card__footer {
+  position: relative;
+  padding: 1rem 2rem;
+  line-height: 2.25rem;
+
+  & h3 {
+    font-size: 2rem;
+    width: 75%;
+    @include ellipsis;
+  }
+
+  & p {
+    font-size: 1.7rem;
+    width: 75%;
+    @include ellipsis;
+  }
+}
 
 //! FAVORITES = HEART CHECKBOX
 .restaurant-card__heart {
-    &::before {
-        @include heart;
-        //! SIZE & POSITION 
-        font-size: 3rem;
-        padding: 1rem;      
-        right : 2rem;
-        bottom: 1.25rem;              
-    }    
+  &::before {
+    @include heart;
+    //* SIZE & POSITION
+    font-size: 3rem;
+    right: 2rem;
+    bottom: 1rem;
+  }
 
-    &::after {
-        @include heart; 
-        @include gradient; 
-        font-weight: 900;                
-        color: transparent;
-        opacity: 0;
-        //! SIZE & POSITION 
-        font-size: 3.2rem;  
-        padding: 1rem;       
-        right : 1.90rem;
-        bottom: 1.20rem;                                                                                
-    }
+  &::after {
+    @include heart;
+    @include gradient;
+    font-weight: 900;
+    color: transparent;
+    opacity: 0;
+    //* SIZE & POSITION
+    font-size: 3.2rem;
+    right: 1.9rem;
+    bottom: 0.95rem;
+  }
 
-    &:hover::before {                     
-        opacity: 0;                                                
-    }  
-    
-    &:hover::after {  
-        opacity: 1;                          
-    }
+  &:active::before {
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
 }
-
 
 //! "NEW" = RUBAN MODIFIER
-.restaurant__card--new {  
-    &::before { 
-        content: "Nouveau";
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-        padding: 1rem;
-        background-color: $color-3;
-        color: darken($color-3, 50%);
-        font-weight: 500;   
-        filter: brightness(105%);    
-    }    
+.restaurant__card--new {
+  &::before {
+    content: "Nouveau";
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    padding: 1rem;
+    background-color: $color-3;
+    color: darken($color-3, 50%);
+    font-size: 1.6rem;
+    font-weight: 500;
+    filter: brightness(105%);
+  }
 }
-
-

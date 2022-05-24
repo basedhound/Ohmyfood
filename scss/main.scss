@@ -1,4 +1,4 @@
-//!  MAIN SCSS : IMPORTS
+//!  MAIN SCSS IMPORTS
 
 //* BASE
 @import "./UTILS/base";
@@ -7,7 +7,6 @@
 @import "./UTILS/_mixins";
 @import "./UTILS/_variables";
 @import "./UTILS/_animations";
-
 
 //* LAYOUT
 @import "./LAYOUT/_00_loader.scss";
@@ -18,7 +17,6 @@
 @import "./LAYOUT/_04_tutorial.scss";
 @import "./LAYOUT/_05_restaurants.scss";
 @import "./LAYOUT/_06_footer.scss";
-
 
 //* PAGES
 

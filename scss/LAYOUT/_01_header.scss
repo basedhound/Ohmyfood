@@ -1,27 +1,27 @@
 //!  MAIN LAYOUT - HEADER
 
 .header {
-    @include box-shadow;
-    font-family: "Shrikhand", cursive; 
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 0.2rem;
-    position: relative;
-    cursor: pointer;
-    //! ANIMATION
-    animation: expand 3s ease;
+  @include box-shadow;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.2rem;
+  position: relative;
+  cursor: pointer;
+  
+  //* ANIMATION
+  animation: expand 3s ease;
 
-    h1 { 
-        padding: 2rem;
-    }
+  h1 {
+    padding: 2rem;
+  }
 
-    a { 
-        text-decoration: none;
-        color: black;
-    }
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
-    @media (min-width: 320px) {
-        font-size: 2rem;        
-    }  
-
+  @media (min-width: 320px) {
+    font-size: 2rem;
+  }
 }

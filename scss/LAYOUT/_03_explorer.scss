@@ -1,22 +1,22 @@
 //!  MAIN LAYOUT - EXPLORER BUTTON
 
 .explorer-section {
-    text-align: center;
-    background-color: $color-5;
-    padding: 2rem;
+  text-align: center;
+  background-color: $color-5;
+  padding: 2rem;
 
-    h2 {
-        padding: 1rem;        
-    }
+  h2 {
+    padding: 1rem;
+  }
 
-    p {
-        font-size: 1.8rem;
-        color: grey;
-        padding: 1rem;
-    }   
+  p {
+    font-size: 1.8rem;
+    color: grey;
+    padding: 1rem;
+  }
 }
 
 .explorer__button {
-    @include button-primary;
-    margin: 3rem 0rem;
+  @include button-primary;
+  margin: 3rem 0rem;
 }

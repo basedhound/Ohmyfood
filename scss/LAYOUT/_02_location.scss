@@ -1,17 +1,17 @@
 //!  MAIN LAYOUT - LOCATION, CITY
 
 .location-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem; 
-    background-color: $color-4;
-    padding: 1rem;
-    color: grey;
-    font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: $color-4;
+  padding: 1rem;
+  color: grey;
+  font-size: 1.5rem;
 
-    h2 {
-        font-size: 2rem;
-        padding: 2rem 0;        
-    }
+  h2 {
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
 }
