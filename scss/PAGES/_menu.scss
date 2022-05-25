@@ -61,11 +61,11 @@
   animation: focus 2s ease;
 }
 
+//! HEART CHECKBOX (FAVORITES)
 .menu-title__heart {
   &::before {
     @include heart;
-    //* SIZE & POSITION
-    font-size: 3rem;
+    //* POSITION
     right: 2.5rem;
     bottom: 1rem;
   }
@@ -76,10 +76,9 @@
     font-weight: 900;
     color: transparent;
     opacity: 0;
-    //* SIZE & POSITION
-    font-size: 3.2rem;
-    right: 2.4rem;
-    bottom: 0.95rem;
+    //* POSITION
+    right: 2.5rem;
+    bottom: 1rem;
   }
 
   &:hover::before {

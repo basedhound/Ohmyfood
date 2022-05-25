@@ -74,6 +74,10 @@ ul {
   display: none;
 }
 
+.check-heart[type=checkbox]:checked + label::before {
+  opacity: 0;
+}
+
 .check-heart[type=checkbox]:checked + label::after {
   opacity: 1;
 }
@@ -298,13 +302,12 @@ ul {
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding-left: 0rem;
+  padding-left: 1rem;
   gap: 4rem;
 }
 @media (min-width: 950px) {
   .tutorial-section ol {
     flex-direction: row;
-    padding-left: 1rem;
   }
 }
 
@@ -344,7 +347,7 @@ ul {
   content: counter(tuto);
   background-color: #9356dc;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   font-weight: 500;
   width: 2.5rem;
   height: 2.5rem;
@@ -443,12 +446,12 @@ ul {
   font-weight: 400;
   content: "\f004";
   padding: 1rem;
+  font-size: 3rem;
   cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
   transition: all 200ms ease-in-out;
-  font-size: 3rem;
   right: 2rem;
   bottom: 1rem;
 }
@@ -463,6 +466,7 @@ ul {
   font-weight: 400;
   content: "\f004";
   padding: 1rem;
+  font-size: 3rem;
   cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
@@ -472,11 +476,10 @@ ul {
   font-weight: 900;
   color: transparent;
   opacity: 0;
-  font-size: 3.2rem;
-  right: 1.9rem;
-  bottom: 0.95rem;
+  right: 2rem;
+  bottom: 1rem;
 }
-.restaurant-card__heart:active::before {
+.restaurant-card__heart:hover::before {
   opacity: 0;
 }
 .restaurant-card__heart:hover::after {
@@ -598,12 +601,12 @@ ul {
   font-weight: 400;
   content: "\f004";
   padding: 1rem;
+  font-size: 3rem;
   cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
   transition: all 200ms ease-in-out;
-  font-size: 3rem;
   right: 2.5rem;
   bottom: 1rem;
 }
@@ -618,6 +621,7 @@ ul {
   font-weight: 400;
   content: "\f004";
   padding: 1rem;
+  font-size: 3rem;
   cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
@@ -627,9 +631,8 @@ ul {
   font-weight: 900;
   color: transparent;
   opacity: 0;
-  font-size: 3.2rem;
-  right: 2.4rem;
-  bottom: 0.95rem;
+  right: 2.5rem;
+  bottom: 1rem;
 }
 .menu-title__heart:hover::before {
   opacity: 0;

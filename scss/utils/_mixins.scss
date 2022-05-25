@@ -63,6 +63,7 @@
   content: "\f004";
   //* SETTINGS
   padding: 1rem;
+  font-size: 3rem;
   cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
@@ -77,6 +78,13 @@
   display: none;
 }
 
+//* EMPTY HEART OPACITY WHEN CHECKED
+.check-heart[type="checkbox"]:checked + label::before {
+  opacity: 0;
+}
+
+//* GRADIENT HEART OPACITY WHEN CHECKED
 .check-heart[type="checkbox"]:checked + label::after {
   opacity: 1;
 }
+
