@@ -72,9 +72,9 @@ Vous avez désormais tous les éléments pour construire ce site mobile.
 
 **Utilisé:** 
 - HTML / CSS / Sass 
-- CSS Keyframes Animations
+- CSS Animations
 - CSS Mediaqueries
-- Sass Mixins
+- Sass : Mixins, Variables, Keyframes, Loops, Nesting, ...
 - Npm scripts
 - Post CSS Autoprefixer 
 

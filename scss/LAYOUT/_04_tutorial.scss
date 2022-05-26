@@ -35,12 +35,11 @@
   cursor: default;
   //* TRANSITION
   transition: all 300ms ease-in-out;
-  //* ANIMATION
-  animation: fadein-ltr 500ms;
-  animation-fill-mode: both;
-  //* LOOP
+  //* ANIMATION + LOOP
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
+      animation: fadein-ltr 500ms;
+      animation-fill-mode: both;
       animation-delay: 750ms * $i;
     }
   }

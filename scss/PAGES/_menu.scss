@@ -54,7 +54,6 @@
   position: relative;
   font-family: "Shrikhand", cursive;
   padding: 2rem 3rem;
-  font-size: 2.5rem;
   padding-right: 7rem;
   cursor: default;
   //* ANIMATION
@@ -67,7 +66,8 @@
     @include heart;
     //* POSITION
     right: 2.5rem;
-    bottom: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &::after {
@@ -78,7 +78,8 @@
     opacity: 0;
     //* POSITION
     right: 2.5rem;
-    bottom: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &:hover::before {
@@ -101,26 +102,17 @@
 .submenu {
   overflow: hidden;
   padding: 0 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; 
 }
+
 
 //! MENU - SUBMENU - ANIMATION DELAY
-.submenu1--anim {
-  animation: fadein-btt 1.5s;
-  animation-delay: 500ms;
-  animation-fill-mode: both;
-}
-
-.submenu2--anim {
-  animation: fadein-btt 1.5s;
-  animation-delay: 1s;
-  animation-fill-mode: both;
-}
-
-.submenu3--anim {
-  animation: fadein-btt 1.5s;
-  animation-delay: 1.5s;
-  animation-fill-mode: both;
+@for $i from 1 through 3 {
+  .submenu--anim#{$i} {
+      animation: fadein-btt 1.5s;
+      animation-fill-mode: both;
+      animation-delay: 500ms * $i;
+  }
 }
 
 //! MENU - SUBMENU - TITLE

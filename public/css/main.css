@@ -324,16 +324,20 @@ ul {
   font-size: 1.8rem;
   cursor: default;
   transition: all 300ms ease-in-out;
-  animation: fadein-ltr 500ms;
-  animation-fill-mode: both;
 }
 .tutorial-section li:nth-child(1) {
+  animation: fadein-ltr 500ms;
+  animation-fill-mode: both;
   animation-delay: 750ms;
 }
 .tutorial-section li:nth-child(2) {
+  animation: fadein-ltr 500ms;
+  animation-fill-mode: both;
   animation-delay: 1500ms;
 }
 .tutorial-section li:nth-child(3) {
+  animation: fadein-ltr 500ms;
+  animation-fill-mode: both;
   animation-delay: 2250ms;
 }
 .tutorial-section li i {
@@ -584,7 +588,6 @@ ul {
   position: relative;
   font-family: "Shrikhand", cursive;
   padding: 2rem 3rem;
-  font-size: 2.5rem;
   padding-right: 7rem;
   cursor: default;
   animation: focus 2s ease;
@@ -608,7 +611,8 @@ ul {
   opacity: 1;
   transition: all 200ms ease-in-out;
   right: 2.5rem;
-  bottom: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .menu-title__heart::after {
   position: absolute;
@@ -632,7 +636,8 @@ ul {
   color: transparent;
   opacity: 0;
   right: 2.5rem;
-  bottom: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .menu-title__heart:hover::before {
   opacity: 0;
@@ -656,22 +661,22 @@ ul {
   margin-bottom: 2rem;
 }
 
-.submenu1--anim {
+.submenu--anim1 {
   animation: fadein-btt 1.5s;
+  animation-fill-mode: both;
   animation-delay: 500ms;
-  animation-fill-mode: both;
 }
 
-.submenu2--anim {
+.submenu--anim2 {
   animation: fadein-btt 1.5s;
-  animation-delay: 1s;
   animation-fill-mode: both;
+  animation-delay: 1000ms;
 }
 
-.submenu3--anim {
+.submenu--anim3 {
   animation: fadein-btt 1.5s;
-  animation-delay: 1.5s;
   animation-fill-mode: both;
+  animation-delay: 1500ms;
 }
 
 .submenu__title {
