@@ -321,7 +321,7 @@ ul {
   flex-grow: 1;
   border-radius: 1.5rem;
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   cursor: default;
   transition: all 300ms ease-in-out;
 }
@@ -715,6 +715,16 @@ ul {
   margin-right: 0;
 }
 .submenu-item:hover .submenu-item__check-icon {
+  transform: rotate(0deg);
+}
+.submenu-item:active {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 15px;
+  transform: scale(1.025);
+}
+.submenu-item:active .submenu-item__check {
+  margin-right: 0;
+}
+.submenu-item:active .submenu-item__check-icon {
   transform: rotate(0deg);
 }
 

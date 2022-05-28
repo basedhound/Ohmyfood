@@ -12,8 +12,8 @@ Vous pouvez retrouver le [cahier des charges ici.](https://s3.eu-west-1.amazonaw
 
 # Objectifs
 
-1. Développer un site proposant le menu de 4 grands restaurants parisiens.
-2. Développer un site responsive en mobile-first.
+1. Développer un site proposant le menu de 4 restaurants.
+2. Implémenter une interface responsive en mobile first.
 3. Mettre en œuvre des effets/animations CSS graphiques avancés
 4. Utiliser un système de versioning pour le suivi du projet et son hébergement.
 5. Assurer la cohérence graphique d'un site web.

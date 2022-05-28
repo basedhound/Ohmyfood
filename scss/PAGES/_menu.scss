@@ -58,6 +58,7 @@
   cursor: default;
   //* ANIMATION
   animation: focus 2s ease;
+
 }
 
 //! HEART CHECKBOX (FAVORITES)
@@ -106,7 +107,7 @@
 }
 
 
-//! MENU - SUBMENU - ANIMATION DELAY
+//! MENU - SUBMENU - ANIMATION LOOP
 @for $i from 1 through 3 {
   .submenu--anim#{$i} {
       animation: fadein-btt 1.5s;
@@ -161,6 +162,22 @@
       transform: rotate(0deg);
     }
   }
+
+  &:active {
+    @include hover-shadow;
+    @include zoom;
+
+    //* ITEM CHECK ANIMATION
+    .submenu-item__check {
+      margin-right: 0;
+    }
+
+    //* ITEM CHECK ICON ANIMATION
+    .submenu-item__check-icon {
+      transform: rotate(0deg);
+    }
+  }
+
 }
 
 .submenu-item__detail {
@@ -182,7 +199,7 @@
   padding: 1.5rem;
 }
 
-//! MENU - SUBMENU - ITEM CHECK ELEMENTS FOR ANIMATION
+//! MENU - SUBMENU - ITEM CHECK
 .submenu-item__check {
   display: flex;
   align-items: center;

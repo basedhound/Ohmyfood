@@ -1,6 +1,6 @@
 //! ANIMATIONS
 
-//! INDEX PAGE LOADER
+//! PAGE LOADER
 @keyframes loader-fadeout {
   from {
     opacity: 1;
@@ -11,6 +11,7 @@
   }
 }
 
+//! PAGE LOADER - ELEMENTS
 @keyframes grow-bars {
   0% {
     transform: scaleY(0);
@@ -83,7 +84,7 @@
   }
 }
 
-//! MENU TITLE
+//! MENU - TITLE
 @keyframes focus {
   0% {
     filter: blur(12px);
@@ -95,7 +96,7 @@
   }
 }
 
-//! MENU ITEMS
+//! MENU - SUBMENUS
 @keyframes fadein-btt {
   0% {
     transform: translateY(10%);
@@ -106,3 +107,6 @@
     opacity: 1;
   }
 }
+
+
+
