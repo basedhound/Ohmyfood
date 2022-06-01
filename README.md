@@ -6,9 +6,9 @@ L'objectif d'intégrer puis de dynamiser une page web avec des animations CSS en
 
 Vous pouvez retrouver le [cahier des charges ici.](https://s3.eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P3+CSS+animations/DW+P3+-+Brief+creatif+-+Ohmyfood!.pdf)
 
-![screenshot du site](./src/public/../../public/img/screenshot/Github%2001.jpg)
+![screenshot du site](/public/img/screenshots/Github%2001.jpg)
 
-![screenshot du site](./src/public/../../public/img/screenshot/Github%2002.jpg)
+![screenshot du site](/public/img/screenshots/Github%2002.jpg)
 
 # Objectifs
 
