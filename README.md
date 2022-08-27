@@ -1,16 +1,16 @@
-# OHMYFOOD
+# Ohmyfood
 
 Troisième projet du parcours "Développeur web" chez OpenClassrooms. 
 
-L'objectif d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass. 
+L'objectif est d'intégrer et dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass. 
 
-Vous pouvez retrouver le [cahier des charges ici.](https://s3.eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P3+CSS+animations/DW+P3+-+Brief+creatif+-+Ohmyfood!.pdf)
+- [Cahier des charges](./public/notes/Ohmyfood%20-%20Brief%20Cr%C3%A9atif.pdf)
 
-![screenshot du site](/public/img/screenshots/Github%2001.jpg)
+- [Aspect visuel du site](./public/notes/Ohmyfood%20-%20Aspect%20visuel.pdf)
 
-![screenshot du site](/public/img/screenshots/Github%2002.jpg)
+![screenshot du site](./public/notes/Ohmyfood%20-%20readme%20cover.jpg)
 
-# Objectifs
+# Compétences évaluées
 
 1. Développer un site proposant le menu de 4 restaurants.
 2. Implémenter une interface responsive en mobile first.
@@ -19,6 +19,18 @@ Vous pouvez retrouver le [cahier des charges ici.](https://s3.eu-west-1.amazonaw
 5. Assurer la cohérence graphique d'un site web.
 6. Mettre en place son environnement Front-End.
 7. Mettre en place une structure de navigation pour un site web.
+
+# Technologies
+**Utilisées:** 
+- CSS : Animations, Mediaqueries ...
+- Sass : Mixins, Variables, Keyframes, Loops, Nesting ...
+- Post CSS Autoprefixer 
+- NPM scripts
+
+**Interdites:** 
+- Javascript 
+- Framework CSS (Bootstrap, Tailwind)
+
 
 # Scénario
 
@@ -33,9 +45,7 @@ Pour ce projet, vous versionnez tout votre code sur Github avec des commits rég
 Vous avez désormais tous les éléments pour construire ce site mobile. 
 
 # Livrables
-
 ## Pages à intégrer selon les maquettes :
-
 - **Page d’accueil** 
 1. Affichage de la localisation des restaurants. À terme il sera possible de choisir sa localisation pour trouver des restaurants proches d’un certain lieu. 
 2. Une courte présentation de l’entreprise. Une section contenant les 4 menus sous forme cartes. Au clic sur la carte, l’utilisateur est redirigé vers la page du menu. 
@@ -53,10 +63,7 @@ Vous avez désormais tous les éléments pour construire ce site mobile.
 3. Sur les pages de menu, il contient en plus un bouton de retour vers la page d’accueil
 
 
-
-
 # Effets graphiques et animations
-
 **Boutons**
 - Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. L’ombre portée devra également être plus visible.
 - À terme, les visiteurs pourront sauvegarder leurs menus préférés. Pour ça, unbouton "J’aime" en forme de cœur est présent sur la maquette. Au clic, il devra se remplir progressivement. Pour cette première version, l’effet peut être apparaître au survol au lieu du clic.
@@ -68,23 +75,7 @@ Vous avez désormais tous les éléments pour construire ce site mobile.
 - À l’arrivée sur la page, les plats devront apparaître progressivement avec un léger décalage dans le temps. Ils pourront soit apparaître un par un, soit par groupe “Entrée”, “Plat” et “Dessert”. Un exemple de l’effet attendu est fourni.
 - Le visiteur peut ajouter les plats qu'il souhaite à sa commande en cliquant dessus. Cela fait apparaître une petite coche à droite du plat. Cette coche devra coulisser dela droite vers la gauche. Pour cette première version, l’effet peut apparaître au survolau lieu du clic. Si l’intitulé du plat est trop long, il devra être rogné avec des points de suspension. Un exemple de l’effet attendu est fourni  
 
-# Technologies
-
-**Utilisé:** 
-- HTML / CSS / Sass 
-- CSS Animations
-- CSS Mediaqueries
-- Sass : Mixins, Variables, Keyframes, Loops, Nesting, ...
-- Npm scripts
-- Post CSS Autoprefixer 
-
-**Recommandé:** HTML / CSS / Sass
-
-**Interdit:** Javascript / Frameworks CSS / Inline CSS 
-
-
 # Notes 
-
 **Polices :**
 - Logo & titres: Shrikhand
 - Texte: Roboto
