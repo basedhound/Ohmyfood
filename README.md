@@ -14,9 +14,12 @@
 
 ##  <br /> <a name="introduction">✨ Introduction</a>
 
-**[EN]** Landing/Menu pages design for a restaurant featuring a modern and minimalist aesthetic, crafted using HTML and CSS only. Enhanced with smooth CSS animations.
+**[EN]** Landing/Menu pages design for a restaurant featuring a modern and minimalist aesthetic, crafted using HTML and CSS only. Enhanced with smooth CSS animations. For more information, see the [docs](/docs/) folder.
 
-**[FR]**Pages d'accueil/menu pour un restaurant présentant une esthétique moderne et minimaliste, réalisées uniquement avec HTML et CSS. Embellie par des animations CSS fluides.
+
+
+**[FR]** Pages d'accueil/menu pour un restaurant présentant une esthétique moderne et minimaliste, réalisées uniquement avec HTML et CSS. Embellie par des animations CSS fluides. 
+Pour plus d'informations, consultez le dossier [docs](/docs/).
 
 ##  <br /> <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -28,8 +31,6 @@
 **Forbidden:** 
 - JavaScript 
 - CSS Frameworks (Bootstrap, Tailwind...)
-
-More informations in folder ".docs"
 
 ## <br /> <a name="quick-start">🚀 Quick Start</a>
 
