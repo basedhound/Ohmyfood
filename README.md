@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://ohmyfood-fv.netlify.app target="_blank">
+    <a href="https://ohmyfood-fv.netlify.app" target="_blank">
       <img src="docs/preview.webp" alt="Project Banner">
     </a>
   <h3 align="center">Ohmyfood Restaurant</h3>
