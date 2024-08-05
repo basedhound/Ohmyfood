@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://ohmyfood-fv.netlify.app" target="_blank">
-      <img src="docs/preview.webp" alt="Project Banner">
+      <img src="docs/preview.png" alt="Project Banner">
     </a>
   <h3 align="center">Ohmyfood Restaurant</h3>
   <h4 align="center">School Project</h4>
@@ -14,7 +14,7 @@
 
 ##  <br /> <a name="introduction">✨ Introduction</a>
 
-**[EN]** Landing/Menu pages design for a restaurant featuring a modern and minimalist aesthetic, crafted using HTML and CSS only. Enhanced with smooth CSS animations. For more information, see the [docs](/docs/) folder.
+**[EN]** Landing/Menu pages design for a restaurant featuring a modern and minimalist aesthetic, crafted using HTML and CSS only. Enhanced with smooth CSS animations built from scratch. For more information, see the [docs](/docs/) folder.
 
 
 
